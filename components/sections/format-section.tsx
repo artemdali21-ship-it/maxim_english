@@ -1,7 +1,15 @@
 export function FormatSection() {
   return (
-    <section id="format" className="py-20 md:py-28 px-6" style={{ backgroundColor: '#3D5E3D' }}>
-      <div className="max-w-7xl mx-auto">
+    <section id="format" className="py-20 md:py-28 px-6 relative overflow-hidden" style={{
+      backgroundImage: 'url(/format-section-bg.jpeg)',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundAttachment: 'fixed'
+    }}>
+      {/* Overlay for better text readability */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/50 to-black/60"></div>
+      
+      <div className="max-w-7xl mx-auto relative z-10">
         <h2 className="text-5xl md:text-6xl font-serif font-bold text-white mb-4 tracking-tight leading-tight">
           Как устроены<br />
           <span className="text-yellow-100">занятия</span>
