@@ -2,25 +2,26 @@ import Image from 'next/image';
 
 export function LibrarySection() {
   return (
-    <section id="library" className="relative py-16 md:py-32 px-4 md:px-6 text-white overflow-hidden">
-      {/* Background Image Layer */}
+    <section id="library" className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Image */}
       <Image
         src="/library-bg.jpg"
-        alt="Премиум домашняя библиотека с деревянными полками и кожаным диваном"
+        alt="Премиум домашняя библиотека"
         fill
-        className="absolute inset-0 object-cover -z-20"
+        className="object-cover"
         priority
       />
+      
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/60 -z-10"></div>
+      <div className="absolute inset-0 bg-black/60"></div>
 
-      {/* Content */}
-      <div className="max-w-7xl mx-auto relative z-10">
+      {/* Text Content */}
+      <div className="relative z-10 max-w-4xl px-4 md:px-6 py-16 md:py-32 text-white">
         <h2 className="text-4xl md:text-5xl font-bold mb-12 font-space-grotesk tracking-tight leading-tight">
           Знания — это структура, не информация
         </h2>
 
-        <div className="max-w-4xl text-lg leading-relaxed space-y-6">
+        <div className="text-lg leading-relaxed space-y-6">
           <p>
             Каждый кирпичик на месте. Каждое правило служит смыслу.
             Не случайный набор фактов, а единая архитектура языка.
