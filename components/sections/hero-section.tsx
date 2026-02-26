@@ -7,13 +7,18 @@ export function HeroSection() {
     <section 
       id="hero" 
       className="relative pt-24 pb-20 md:pt-32 md:pb-32 px-6 min-h-screen flex items-center overflow-hidden"
-      style={{
-        backgroundImage: 'url(/hero-bg-oxford.jpg)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed'
-      }}
     >
+      {/* Background Video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover -z-20"
+      >
+        <source src="/hero-bg.mp4" type="video/mp4" />
+      </video>
+
       {/* Enhanced geometric overlay for better text readability */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/20 -z-10"></div>
       {/* Additional dark overlay on left side for text */}
