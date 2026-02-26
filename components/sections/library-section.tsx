@@ -6,7 +6,7 @@ export function LibrarySection() {
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/library-hero.jpg"
+          src="/library-bg.jpg"
           alt="Премиум домашняя библиотека с деревянными полками и кожаным диваном"
           fill
           className="object-cover"
