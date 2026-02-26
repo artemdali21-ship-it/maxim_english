@@ -23,10 +23,10 @@ export function TestimonialsSection() {
       backgroundSize: 'cover',
       backgroundPosition: 'center 30%',
       backgroundRepeat: 'no-repeat',
-      backgroundAttachment: 'fixed'
+      backgroundAttachment: 'scroll'
     }}>
-      {/* Shadow effect - NONE on mobile for parallax, light on desktop */}
-      <div className="absolute inset-0 bg-gradient-to-t from-transparent md:from-black/30 via-transparent md:via-transparent to-transparent"></div>
+      {/* Mobile overlay disabled, desktop with parallax overlay */}
+      <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
       <div className="absolute bottom-0 left-0 right-0 h-32 md:h-96 bg-gradient-to-t from-background via-background/50 to-transparent"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
