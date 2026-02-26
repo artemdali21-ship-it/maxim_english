@@ -10,8 +10,8 @@ export function CTASection() {
           {/* Left - Maxim's Photo */}
           <div className="hidden md:block relative">
             <Image
-              src="/maxim-portrait.png"
-              alt="Максим Онуфриев - портрет"
+              src="/maxim-library.jpeg"
+              alt="Максим Онуфриев в библиотеке"
               width={400}
               height={500}
               className="w-full h-auto object-contain"
