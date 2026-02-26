@@ -70,6 +70,56 @@ export default function RootLayout({
             --input: #0A0A0A;
             --ring: #C5A55A;
           }
+          
+          * {
+            border-color: rgb(var(--border, 213 208 198));
+          }
+          
+          body {
+            background-color: var(--background);
+            color: var(--foreground);
+          }
+          
+          .text-balance {
+            text-wrap: balance;
+          }
+          
+          .text-pretty {
+            text-wrap: pretty;
+          }
+          
+          .blur-3xl {
+            filter: blur(64px);
+          }
+          
+          .animate-fade-in {
+            animation: fadeIn 0.7s ease-out forwards;
+          }
+          
+          @keyframes fadeIn {
+            from {
+              opacity: 0;
+              transform: translateY(10px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+          
+          @media (max-width: 767px) {
+            .parallax-bg {
+              background-attachment: fixed;
+              background-size: contain !important;
+            }
+          }
+          
+          @media (min-width: 768px) {
+            .parallax-bg {
+              background-attachment: fixed;
+              background-size: cover !important;
+            }
+          }
         `}</style>
       </head>
       <body className={`${inter.variable} ${spaceGrotesk.variable} ${playfairDisplay.variable} ${jetbrainsMono.variable} font-sans antialiased bg-background text-foreground`}>
