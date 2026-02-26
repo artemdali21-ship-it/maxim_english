@@ -1,12 +1,7 @@
 import React from "react"
 import type { Metadata } from 'next'
-import { Inter, Space_Grotesk, Playfair_Display, JetBrains_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
-
-const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
-const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: '--font-space-grotesk' });
-const playfairDisplay = Playfair_Display({ subsets: ["latin"], variable: '--font-serif' });
-const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: '--font-mono' });
+import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Maxim Onufriev | English Language Expert',
