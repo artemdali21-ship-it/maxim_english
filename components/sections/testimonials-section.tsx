@@ -1,4 +1,19 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+
 export function TestimonialsSection() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   const testimonials = [
     {
       name: 'Артём',
@@ -20,7 +35,7 @@ export function TestimonialsSection() {
   return (
     <section id="testimonials" className="parallax-bg py-20 md:py-28 px-6 bg-background relative overflow-hidden" style={{
       backgroundImage: 'url(/testimonials-bg.png)',
-      backgroundSize: 'cover',
+      backgroundSize: isMobile ? 'contain' : 'cover',
       backgroundPosition: 'center 30%',
       backgroundRepeat: 'no-repeat'
     }}>
