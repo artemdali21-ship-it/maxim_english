@@ -36,9 +36,9 @@ export function TestimonialsSection() {
         
         <div className="grid md:grid-cols-3 gap-8 mt-16">
           {testimonials.map((testimonial, idx) => (
-            <div key={idx} className="bg-transparent md:bg-secondary/50 p-10 border border-transparent md:border-border/50 space-y-6 md:backdrop-blur">
+            <div key={idx} className="bg-secondary/40 md:bg-secondary/50 p-10 border border-white/10 md:border-border/50 space-y-6 md:backdrop-blur">
               <p className="text-foreground/90 leading-relaxed italic font-light">"{testimonial.quote}"</p>
-              <div className="border-t border-transparent md:border-border/30 pt-6 space-y-1">
+              <div className="border-t border-white/10 md:border-border/30 pt-6 space-y-1">
                 <p className="font-serif font-semibold text-primary">{testimonial.name}</p>
                 <p className="text-xs text-muted-foreground uppercase tracking-wider">{testimonial.role}</p>
               </div>

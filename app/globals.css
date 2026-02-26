@@ -347,6 +347,7 @@
 @media (max-width: 767px) {
   .parallax-bg {
     background-attachment: scroll;
+    background-size: contain !important;
   }
 }
 
