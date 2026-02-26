@@ -80,6 +80,17 @@
   
   --color-oxford-green: #2D4A2D;
   --color-gold: #C5A55A;
+  
+  /* Design tokens for colors */
+  --color-background: #F7F5F0;
+  --color-foreground: #1C1C1A;
+  --color-card: #EDEAE2;
+  --color-primary: #2D4A2D;
+  --color-secondary: #EDEAE2;
+  --color-accent: #C5A55A;
+  --color-border: #D5D0C6;
+  --color-muted: #C5A55A;
+  --color-destructive: #C45C4A;
 }
 
 @layer base {
