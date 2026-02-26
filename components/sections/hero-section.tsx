@@ -6,31 +6,37 @@ export function HeroSection() {
   return (
     <section 
       id="hero" 
-      className="relative pt-24 pb-20 md:pt-32 md:pb-32 px-6 min-h-screen flex items-center overflow-hidden"
+      className="relative pt-24 pb-20 md:pt-32 md:pb-32 px-6 min-h-screen flex items-center overflow-hidden bg-black"
     >
-      {/* Background Video */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover"
-        style={{ zIndex: -20 }}
-      >
-        <source src="/hero-bg.mp4" type="video/mp4" />
-      </video>
+      {/* Background Video - positioned absolutely */}
+      <div className="absolute inset-0 w-full h-full" style={{ zIndex: 0 }}>
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover"
+          crossOrigin="anonymous"
+        >
+          <source src="/hero-bg.mp4" type="video/mp4" />
+          {/* Fallback image if video doesn't load */}
+          <Image
+            src="/hero-bg-oxford.jpg"
+            alt="Oxford University courtyard"
+            fill
+            className="object-cover"
+            priority
+          />
+        </video>
+      </div>
 
       {/* Enhanced geometric overlay for better text readability */}
       <div 
-        className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/20"
-        style={{ zIndex: -10 }}
-      ></div>
-      {/* Additional dark overlay on left side for text */}
-      <div 
-        className="absolute left-0 top-0 bottom-0 w-1/2 bg-gradient-to-r from-black/50 to-transparent"
-        style={{ zIndex: -10 }}
+        className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"
+        style={{ zIndex: 1 }}
       ></div>
 
+      {/* Content */}
       <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-16 items-center relative" style={{ zIndex: 10 }}>
         <div className="space-y-8">
           <h1 className="text-6xl md:text-7xl font-serif font-bold text-white leading-tight tracking-tight">
@@ -64,7 +70,7 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="relative hidden md:block" style={{ zIndex: 20 }}>
+        <div className="relative hidden md:block">
           <div className="relative aspect-square overflow-hidden border border-white/15">
             <Image
               src="/maxim-balcony.jpg"
