@@ -2,8 +2,6 @@
 @import 'tw-animate-css';
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
-@custom-variant dark (&:is(.dark *));
-
 :root {
   /* British Heritage Palette */
   --color-oxford-green: #2D4A2D;
@@ -53,6 +51,8 @@
   --sidebar-border: #D5D0C6;
   --sidebar-ring: #F0EDE5;
 }
+
+@custom-variant dark (&:is(.dark *));
 
 .dark {
   --background: #0A0A0A;
