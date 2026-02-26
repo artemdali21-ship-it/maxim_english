@@ -5,7 +5,6 @@ import { AboutSection } from "@/components/sections/about-section";
 import { AccentsSection } from "@/components/sections/accents-section";
 import { PhilosophySection } from "@/components/sections/philosophy-section";
 import { MethodSection } from "@/components/sections/method-section";
-import { ForWhomTriggerLine } from "@/components/sections/for-whom-trigger-line";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
 import { CTASection } from "@/components/sections/cta-section";
 import { FooterSection } from "@/components/sections/footer-section";
@@ -20,7 +19,6 @@ export default function Home() {
       <AccentsSection />
       <PhilosophySection />
       <MethodSection />
-      <ForWhomTriggerLine />
       <TestimonialsSection />
       <CTASection />
       <FooterSection />
