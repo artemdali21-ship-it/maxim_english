@@ -1,7 +1,13 @@
 import React from "react"
 import type { Metadata } from 'next'
+import { Inter, Space_Grotesk, Playfair_Display, JetBrains_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
+
+const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
+const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: '--font-space-grotesk' });
+const playfairDisplay = Playfair_Display({ subsets: ["latin"], variable: '--font-serif' });
+const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: '--font-mono' });
 
 export const metadata: Metadata = {
   title: 'Maxim Onufriev | English Language Expert',
@@ -102,7 +108,7 @@ export default function RootLayout({
           }
         `}</style>
       </head>
-      <body className="font-sans antialiased bg-background text-foreground">
+      <body className={`${inter.variable} ${spaceGrotesk.variable} ${playfairDisplay.variable} ${jetbrainsMono.variable} font-sans antialiased bg-background text-foreground`}>
         {children}
         <Analytics />
       </body>

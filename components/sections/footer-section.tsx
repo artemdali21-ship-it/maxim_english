@@ -12,7 +12,7 @@ export function FooterSection() {
               Максим Онуфриев
             </h3>
             <p className="text-xs uppercase tracking-widest text-primary-foreground/70 font-medium">
-              Преподаватель английского языка
+              English Language Education
             </p>
           </div>
 
@@ -70,7 +70,7 @@ export function FooterSection() {
             © 2026 Максим Онуфриев.<br />Все права защищены.
           </p>
           <p className="text-xs text-primary-foreground/60 leading-relaxed md:text-right mt-6 md:mt-0">
-            Системное обучение<br />английскому языку
+            Качественное образование<br />в английском языке
           </p>
         </div>
       </div>
