@@ -4,16 +4,16 @@ import Image from 'next/image';
 
 export function HeroSection() {
   return (
-    <section id="hero" className="relative pt-24 pb-20 md:pt-32 md:pb-32 px-6 min-h-screen flex items-center overflow-hidden">
-      {/* Background Image with overlay */}
-      <Image
-        src="/hero-bg-oxford.jpg"
-        alt="Oxford University courtyard"
-        fill
-        className="absolute inset-0 object-cover -z-20"
-        priority
-      />
-      
+    <section 
+      id="hero" 
+      className="relative pt-24 pb-20 md:pt-32 md:pb-32 px-6 min-h-screen flex items-center overflow-hidden"
+      style={{
+        backgroundImage: 'url(/hero-bg-oxford.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}
+    >
       {/* Enhanced geometric overlay for better text readability */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/20 -z-10"></div>
       {/* Additional dark overlay on left side for text */}
