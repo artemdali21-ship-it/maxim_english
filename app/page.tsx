@@ -21,8 +21,8 @@ export default function Home() {
       <TrustBarSection />
       <AboutSection />
       <LibrarySection />
-      <PhilosophySection />
       <AccentsSection />
+      <PhilosophySection />
       <MethodSection />
       <FormatSection />
       <ForWhomSection />
