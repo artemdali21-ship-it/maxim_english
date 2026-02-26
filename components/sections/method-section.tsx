@@ -22,7 +22,7 @@ export function MethodSection() {
     {
       title: 'British Slang & Informal Speech',
       description: 'То, чему не учат нигде. Британские выражения, разговорные конструкции, культурный контекст. Мост между «правильным» и «живым» английским.',
-      image: '/method-british-slang.jpg'
+      image: '/british-slang-london.jpg'
     },
   ];
 
