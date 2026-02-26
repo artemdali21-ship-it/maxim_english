@@ -12,7 +12,7 @@ export function FooterSection() {
               Максим Онуфриев
             </h3>
             <p className="text-xs uppercase tracking-widest text-primary-foreground/70">
-              English Language Education
+              Преподаватель английского языка
             </p>
           </div>
 

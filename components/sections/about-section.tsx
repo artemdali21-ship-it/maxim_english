@@ -33,7 +33,7 @@ export function AboutSection() {
             <div className="bg-secondary/50 p-8 border border-border/50 mt-4">
               <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-3">Факт</p>
               <p className="text-sm leading-relaxed text-foreground/90">
-                Помимо английского, я изучал китайский — один из сложнейших языков мира. Это дало мне уникальное понимание того, как люди осваивают фонетику и структуру чужого языка.
+                Я требовательный преподаватель. Если вы ошиблись — я поправлю. Помимо английского, я изучал китайский — один из сложнейших языков мира. Это дало мне уникальное понимание того, как люди осваивают фонетику и структуру чужого языка.
               </p>
             </div>
           </div>

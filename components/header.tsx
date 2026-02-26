@@ -27,12 +27,9 @@ export function Header() {
     >
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo - Serif luxury brand */}
-        <Link href="/" className="group flex items-baseline gap-2.5">
-          <span className="text-2xl font-serif font-bold text-primary group-hover:text-accent transition-colors duration-300">
-            Maxim
-          </span>
-          <span className="text-xs uppercase tracking-[0.15em] text-muted-foreground group-hover:text-accent transition-colors duration-300 font-medium">
-            English
+        <Link href="/" className="group flex items-baseline gap-1">
+          <span className="text-lg font-serif font-bold text-primary group-hover:text-accent transition-colors duration-300">
+            Maxim Onufriev English
           </span>
         </Link>
 
@@ -42,28 +39,28 @@ export function Header() {
             href="#about" 
             className="text-sm font-medium text-foreground/80 hover:text-accent transition-colors duration-200 relative group"
           >
-            About
+            О преподавателе
             <span className="absolute bottom-0 left-0 w-0 h-px bg-accent group-hover:w-full transition-all duration-300"></span>
           </a>
           <a 
             href="#philosophy" 
             className="text-sm font-medium text-foreground/80 hover:text-accent transition-colors duration-200 relative group"
           >
-            Philosophy
+            Философия
             <span className="absolute bottom-0 left-0 w-0 h-px bg-accent group-hover:w-full transition-all duration-300"></span>
           </a>
           <a 
             href="#method" 
             className="text-sm font-medium text-foreground/80 hover:text-accent transition-colors duration-200 relative group"
           >
-            Method
+            Метод
             <span className="absolute bottom-0 left-0 w-0 h-px bg-accent group-hover:w-full transition-all duration-300"></span>
           </a>
           <a 
             href="#format" 
             className="text-sm font-medium text-foreground/80 hover:text-accent transition-colors duration-200 relative group"
           >
-            Format
+            Формат
             <span className="absolute bottom-0 left-0 w-0 h-px bg-accent group-hover:w-full transition-all duration-300"></span>
           </a>
         </nav>
@@ -76,7 +73,7 @@ export function Header() {
             rel="noopener noreferrer"
           >
             <button className="px-7 py-2.5 bg-accent text-accent-foreground text-sm font-semibold hover:bg-accent/90 transition-all duration-200 border border-accent/50 hover:border-accent hover:shadow-lg hover:shadow-accent/20 hover:-translate-y-0.5">
-              Get Started
+              Записаться
             </button>
           </Link>
         </div>
@@ -97,16 +94,16 @@ export function Header() {
         <div className="md:hidden border-t border-border bg-background px-6 py-8 space-y-6">
           <nav className="flex flex-col gap-6">
             <a href="#about" className="text-foreground hover:text-accent font-medium transition-colors" onClick={() => setIsMenuOpen(false)}>
-              About
+              О преподавателе
             </a>
             <a href="#philosophy" className="text-foreground hover:text-accent font-medium transition-colors" onClick={() => setIsMenuOpen(false)}>
-              Philosophy
+              Философия
             </a>
             <a href="#method" className="text-foreground hover:text-accent font-medium transition-colors" onClick={() => setIsMenuOpen(false)}>
-              Method
+              Метод
             </a>
             <a href="#format" className="text-foreground hover:text-accent font-medium transition-colors" onClick={() => setIsMenuOpen(false)}>
-              Format
+              Формат
             </a>
           </nav>
           <Link 
@@ -116,7 +113,7 @@ export function Header() {
             onClick={() => setIsMenuOpen(false)}
           >
             <button className="w-full px-7 py-3 bg-accent text-accent-foreground text-sm font-semibold hover:bg-accent/90 transition-all border border-accent/50">
-              Get Started
+              Записаться
             </button>
           </Link>
         </div>
