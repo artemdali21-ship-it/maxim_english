@@ -25,6 +25,53 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <style>{`
+          :root {
+            --background: #F7F5F0;
+            --foreground: #1C1C1A;
+            --card: #EDEAE2;
+            --card-foreground: #1C1C1A;
+            --popover: #F7F5F0;
+            --popover-foreground: #1C1C1A;
+            --primary: #2D4A2D;
+            --primary-foreground: #F0EDE5;
+            --secondary: #EDEAE2;
+            --secondary-foreground: #1C1C1A;
+            --muted: #C5A55A;
+            --muted-foreground: #6B6960;
+            --accent: #C5A55A;
+            --accent-foreground: #1A2E1A;
+            --destructive: #C45C4A;
+            --destructive-foreground: #F0EDE5;
+            --border: #D5D0C6;
+            --input: #F7F5F0;
+            --ring: #2D4A2D;
+            --radius: 0.75rem;
+          }
+          .dark {
+            --background: #0A0A0A;
+            --foreground: #FAFAFA;
+            --card: #0A0A0A;
+            --card-foreground: #FAFAFA;
+            --popover: #0A0A0A;
+            --popover-foreground: #FAFAFA;
+            --primary: #F0EDE5;
+            --primary-foreground: #1A2E1A;
+            --secondary: #1A2E1A;
+            --secondary-foreground: #F0EDE5;
+            --muted: #6B6960;
+            --muted-foreground: #A3A3A3;
+            --accent: #C5A55A;
+            --accent-foreground: #0A0A0A;
+            --destructive: #C45C4A;
+            --destructive-foreground: #F0EDE5;
+            --border: #2A2A2A;
+            --input: #0A0A0A;
+            --ring: #C5A55A;
+          }
+        `}</style>
+      </head>
       <body className={`${inter.variable} ${spaceGrotesk.variable} ${playfairDisplay.variable} ${jetbrainsMono.variable} font-sans antialiased bg-background text-foreground`}>
         {children}
         <Analytics />
