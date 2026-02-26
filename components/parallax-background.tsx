@@ -36,7 +36,7 @@ export function ParallaxBackground({
           if (rect.bottom > 0 && rect.top < windowHeight) {
             const scrollPercent = (windowHeight - rect.top) / (windowHeight + rect.height)
             const yOffset = (scrollPercent - 0.5) * rect.height * speed
-            img.style.transform = `translate3d(0, ${yOffset}px, 0) scale(1.2)`
+            img.style.transform = `translate3d(0, ${yOffset}px, 0) scale(1.05)`
           }
           ticking = false
         })
@@ -58,9 +58,9 @@ export function ParallaxBackground({
         alt={alt}
         className="absolute inset-0 w-full h-full object-cover will-change-transform"
         style={{ 
-          transform: 'translate3d(0, 0, 0) scale(1.2)',
-          minHeight: '120%',
-          top: '-10%'
+          transform: 'translate3d(0, 0, 0) scale(1.05)',
+          minHeight: '105%',
+          top: '-2.5%'
         }}
       />
       {overlay}

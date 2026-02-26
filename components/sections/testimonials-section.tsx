@@ -32,7 +32,7 @@ export function TestimonialsSection() {
         </>
       }
     >
-      <section id="testimonials" className="py-20 md:py-28 px-6 bg-background relative overflow-hidden">
+      <section id="testimonials" className="py-20 md:py-28 px-6 relative overflow-hidden">
         <div className="max-w-7xl mx-auto relative z-10">
           <h2 className="text-5xl md:text-6xl font-serif font-bold text-primary mb-4 tracking-tight leading-tight">
             Что говорят<br />
