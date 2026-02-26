@@ -27,49 +27,45 @@ export function AccentsSection() {
           </div>
         </div>
 
-        {/* Accent Cards Grid - Horizontal Banners */}
-        <div className="grid md:grid-cols-2 gap-6 mb-16">
+        {/* Accent Cards Grid - Horizontal Banners - Compact Layout */}
+        <div className="grid grid-cols-1 gap-4 mb-16">
           {/* Card 1 - London */}
-          <div className="group relative overflow-hidden border border-border hover:border-accent transition">
+          <div className="group relative overflow-hidden border border-border hover:border-accent transition h-32 md:h-40">
             <Image
-              src="/accent-london.jpg"
+              src="/accent-london-banner.jpg"
               alt="London Calling - Британский уличный английский"
-              width={800}
-              height={400}
-              className="w-full object-cover group-hover:scale-105 transition duration-500"
+              fill
+              className="object-cover group-hover:scale-105 transition duration-500"
             />
           </div>
 
           {/* Card 2 - Harvard */}
-          <div className="group relative overflow-hidden border border-border hover:border-accent transition">
+          <div className="group relative overflow-hidden border border-border hover:border-accent transition h-32 md:h-40">
             <Image
-              src="/accent-harvard.jpg"
+              src="/accent-harvard-banner.jpg"
               alt="Harvard Accent - Американский английский"
-              width={800}
-              height={400}
-              className="w-full object-cover group-hover:scale-105 transition duration-500"
+              fill
+              className="object-cover group-hover:scale-105 transition duration-500"
             />
           </div>
 
           {/* Card 3 - Downton Abbey */}
-          <div className="group relative overflow-hidden border border-border hover:border-accent transition">
+          <div className="group relative overflow-hidden border border-border hover:border-accent transition h-32 md:h-40">
             <Image
-              src="/accent-downton.jpg"
+              src="/accent-downton-banner.jpg"
               alt="Downton Abbey - Posh Upper Class английский"
-              width={800}
-              height={400}
-              className="w-full object-cover group-hover:scale-105 transition duration-500"
+              fill
+              className="object-cover group-hover:scale-105 transition duration-500"
             />
           </div>
 
           {/* Card 4 - Cambridge */}
-          <div className="group relative overflow-hidden border border-border hover:border-accent transition">
+          <div className="group relative overflow-hidden border border-border hover:border-accent transition h-32 md:h-40">
             <Image
-              src="/accent-cambridge.jpg"
+              src="/accent-cambridge-banner.jpg"
               alt="Cambridge Professor - Академический английский"
-              width={800}
-              height={400}
-              className="w-full object-cover group-hover:scale-105 transition duration-500"
+              fill
+              className="object-cover group-hover:scale-105 transition duration-500"
             />
           </div>
         </div>
