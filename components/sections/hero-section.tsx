@@ -71,7 +71,9 @@ export function HeroSection() {
         </div>
 
         <div className="relative hidden md:block">
-          <div className="relative aspect-square overflow-hidden border border-white/15">
+          <div className="relative aspect-square overflow-hidden border-6 border-[#F7F5F0]" style={{
+            boxShadow: '0 4px 16px rgba(0, 0, 0, 0.15)'
+          }}>
             <Image
               src="/maxim-balcony.jpg"
               alt="Максим Онуфриев - портрет"
