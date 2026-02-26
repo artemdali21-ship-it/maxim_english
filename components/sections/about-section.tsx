@@ -51,7 +51,7 @@ export function AboutSection() {
             </div>
             <div className="text-center space-y-2">
               <p className="text-5xl font-serif font-bold text-accent">100+</p>
-              <p className="text-xs text-muted-foreground uppercase tracking-wider leading-relaxed">Студентов<br />прошли систему</p>
+              <p className="text-xs text-muted-foreground uppercase tracking-wider leading-relaxed">Студентов<br />прошли мою систему</p>
             </div>
             <div className="text-center space-y-2">
               <p className="text-5xl font-serif font-bold text-accent">5</p>
@@ -59,7 +59,7 @@ export function AboutSection() {
             </div>
             <div className="text-center space-y-2">
               <p className="text-5xl font-serif font-bold text-accent">4</p>
-              <p className="text-xs text-muted-foreground uppercase tracking-wider leading-relaxed">Авторских<br />направлений</p>
+              <p className="text-xs text-muted-foreground uppercase tracking-wider leading-relaxed">Авторских<br />направления</p>
             </div>
           </div>
         </div>

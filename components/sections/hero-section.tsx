@@ -37,8 +37,8 @@ export function HeroSection() {
       ></div>
 
       {/* Content */}
-      <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-16 items-center relative" style={{ zIndex: 10 }}>
-        <div className="space-y-8">
+      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center relative" style={{ zIndex: 10 }}>
+        <div className="space-y-8 order-2 md:order-1">
           <h1 className="text-6xl md:text-7xl font-serif font-bold text-white leading-tight tracking-tight">
             Не обещаю<br />быстро.<br />
             <span className="text-accent">Обещаю правильно.</span>
@@ -70,8 +70,8 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="relative hidden md:block">
-          <div className="relative aspect-square overflow-hidden border-6 border-[#F7F5F0]" style={{
+        <div className="relative order-1 md:order-2">
+          <div className="relative w-full aspect-square overflow-hidden border-6 border-[#F7F5F0]" style={{
             boxShadow: '0 4px 16px rgba(0, 0, 0, 0.15)'
           }}>
             <Image
