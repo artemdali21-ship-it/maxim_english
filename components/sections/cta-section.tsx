@@ -7,15 +7,19 @@ export function CTASection() {
     <section id="cta" className="py-20 md:py-28 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
-          {/* Left - Maxim's Photo */}
+          {/* Left - Maxim's Photo with Frame */}
           <div className="hidden md:block relative">
-            <Image
-              src="/maxim-library.jpeg"
-              alt="Максим Онуфриев в библиотеке"
-              width={400}
-              height={500}
-              className="w-full h-auto object-contain"
-            />
+            <div className="relative inline-block w-full border-8 border-primary/20" style={{
+              boxShadow: '0 8px 24px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.4)'
+            }}>
+              <Image
+                src="/maxim-library.jpeg"
+                alt="Максим Онуфриев в библиотеке"
+                width={400}
+                height={500}
+                className="w-full h-auto object-contain block"
+              />
+            </div>
           </div>
 
           {/* Right - CTA Content */}
