@@ -18,12 +18,11 @@ export function TestimonialsSection() {
   ];
 
   return (
-    <section id="testimonials" className="py-20 md:py-28 px-6 bg-background relative overflow-hidden" style={{
+    <section id="testimonials" className="parallax-bg py-20 md:py-28 px-6 bg-background relative overflow-hidden" style={{
       backgroundImage: 'url(/testimonials-bg.png)',
       backgroundSize: 'cover',
       backgroundPosition: 'center 30%',
-      backgroundRepeat: 'no-repeat',
-      backgroundAttachment: 'scroll'
+      backgroundRepeat: 'no-repeat'
     }}>
       {/* Mobile overlay disabled, desktop with parallax overlay */}
       <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>

@@ -53,6 +53,17 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Parallax Background Class - Works on all screen sizes */
+.parallax-bg {
+  background-attachment: scroll;
+}
+
+@media (min-width: 768px) {
+  .parallax-bg {
+    background-attachment: fixed;
+  }
+}
+
 .dark {
   --background: #0A0A0A;
   --foreground: #FAFAFA;

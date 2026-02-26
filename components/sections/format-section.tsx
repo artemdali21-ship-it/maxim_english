@@ -1,10 +1,10 @@
 export function FormatSection() {
   return (
-    <section id="format" className="py-20 md:py-28 px-6 relative overflow-hidden" style={{
+    <section id="format" className="parallax-bg py-20 md:py-28 px-6 relative overflow-hidden" style={{
       backgroundImage: 'url(/format-section-bg.jpeg)',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-      backgroundAttachment: 'scroll'
+      backgroundRepeat: 'no-repeat'
     }}>
       {/* Overlay - NONE on mobile, strong on desktop */}
       <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-black/60 via-black/50 to-black/60"></div>
