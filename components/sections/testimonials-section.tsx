@@ -18,8 +18,20 @@ export function TestimonialsSection() {
   ];
 
   return (
-    <section id="testimonials" className="py-20 md:py-28 px-6 bg-background">
-      <div className="max-w-7xl mx-auto">
+    <section id="testimonials" className="py-20 md:py-28 px-6 bg-background relative overflow-hidden">
+      {/* Background Image with Shadow Effect */}
+      <div className="absolute inset-0 opacity-15" style={{
+        backgroundImage: 'url(/testimonials-bg.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center bottom',
+        backgroundRepeat: 'no-repeat'
+      }}>
+        {/* Shadow effect for depth */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-96 bg-gradient-to-t from-background via-background/50 to-transparent"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
         <h2 className="text-5xl md:text-6xl font-serif font-bold text-primary mb-4 tracking-tight leading-tight">
           Что говорят<br />
           <span className="text-accent">ученики</span>
