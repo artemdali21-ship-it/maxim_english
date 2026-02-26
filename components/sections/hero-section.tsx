@@ -35,17 +35,17 @@ export function HeroSection() {
 
       {/* Content */}
       <div className="max-w-7xl mx-auto w-full flex flex-col md:grid md:grid-cols-2 gap-4 md:gap-16 items-start md:items-center relative" style={{ zIndex: 10 }}>
-        {/* TITLE - First on mobile, first on desktop */}
-        <div className="w-full order-1 md:order-1">
+        {/* TITLE - First on all versions */}
+        <div className="w-full order-1">
           <h1 className="text-4xl md:text-7xl font-serif font-bold text-white leading-tight tracking-tight">
             Не обещаю<br />быстро.<br />
             <span className="text-accent">Обещаю правильно.</span>
           </h1>
         </div>
 
-        {/* PHOTO - Hidden on mobile, second on desktop */}
-        <div className="relative hidden md:block order-2 md:order-2 w-full md:w-full">
-          <div className="relative w-full aspect-square overflow-hidden border-6 border-[#F7F5F0]" style={{
+        {/* PHOTO - Small on mobile (left), full on desktop (right) */}
+        <div className="relative order-2 md:order-2 w-1/3 md:w-full">
+          <div className="relative w-full aspect-video md:aspect-square overflow-hidden border-2 md:border-6 border-[#F7F5F0]" style={{
             boxShadow: '0 4px 16px rgba(0, 0, 0, 0.15)'
           }}>
             <Image
@@ -59,8 +59,8 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* DESCRIPTION & CTA - Second on mobile, first on desktop */}
-        <div className="space-y-6 md:space-y-8 order-2 md:order-1 w-full md:w-auto md:col-span-2 lg:col-span-1">
+        {/* DESCRIPTION & CTA - Third on mobile, second on desktop */}
+        <div className="space-y-6 md:space-y-8 order-3 md:order-1 w-full">
           <p className="text-base md:text-lg text-white/95 leading-relaxed max-w-xl font-light">
             Максим Онуфриев — филолог МГУ, преподаватель английского с 2010 года. Авторская система: грамматика, живая речь, фонетика и произношение как единая структура языка.
           </p>
