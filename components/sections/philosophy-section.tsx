@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export function PhilosophySection() {
   return (
-    <section id="philosophy" className="relative py-16 md:py-32 px-4 md:px-6 text-primary-foreground overflow-hidden">
+    <section id="philosophy" className="relative py-8 md:py-12 px-4 md:px-6 text-primary-foreground overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
         <Image
