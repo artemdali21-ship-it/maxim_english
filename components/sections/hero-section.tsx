@@ -19,8 +19,7 @@ export function HeroSection() {
             width: '100%',
             height: '100%',
             objectFit: 'cover',
-            objectPosition: '50% 50%',
-            transform: 'scale(1.2)'
+            objectPosition: '50% 50%'
           }}
           crossOrigin="anonymous"
         >
@@ -36,7 +35,7 @@ export function HeroSection() {
 
       {/* Content */}
       <div className="max-w-7xl mx-auto w-full flex flex-col md:grid md:grid-cols-2 gap-4 md:gap-16 items-start md:items-center relative" style={{ zIndex: 10 }}>
-        {/* TITLE - First on mobile, second on desktop */}
+        {/* TITLE - First on mobile, first on desktop */}
         <div className="w-full order-1 md:order-1">
           <h1 className="text-4xl md:text-7xl font-serif font-bold text-white leading-tight tracking-tight">
             Не обещаю<br />быстро.<br />
@@ -44,9 +43,9 @@ export function HeroSection() {
           </h1>
         </div>
 
-        {/* PHOTO - Second on mobile, second on desktop */}
-        <div className="relative order-2 md:order-2 w-full md:w-full">
-          <div className="relative w-4/5 md:w-full mx-auto md:mx-0 aspect-square overflow-hidden border-4 md:border-6 border-[#F7F5F0]" style={{
+        {/* PHOTO - Hidden on mobile, second on desktop */}
+        <div className="relative hidden md:block order-2 md:order-2 w-full md:w-full">
+          <div className="relative w-full aspect-square overflow-hidden border-6 border-[#F7F5F0]" style={{
             boxShadow: '0 4px 16px rgba(0, 0, 0, 0.15)'
           }}>
             <Image
@@ -60,8 +59,8 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* DESCRIPTION & CTA - Third on mobile, first on desktop */}
-        <div className="space-y-6 md:space-y-8 order-3 md:order-1 w-full md:w-auto md:col-span-2 lg:col-span-1">
+        {/* DESCRIPTION & CTA - Second on mobile, first on desktop */}
+        <div className="space-y-6 md:space-y-8 order-2 md:order-1 w-full md:w-auto md:col-span-2 lg:col-span-1">
           <p className="text-base md:text-lg text-white/95 leading-relaxed max-w-xl font-light">
             Максим Онуфриев — филолог МГУ, преподаватель английского с 2010 года. Авторская система: грамматика, живая речь, фонетика и произношение как единая структура языка.
           </p>

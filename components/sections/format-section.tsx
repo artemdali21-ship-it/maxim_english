@@ -6,8 +6,8 @@ export function FormatSection() {
       backgroundPosition: 'center',
       backgroundAttachment: 'fixed'
     }}>
-      {/* Overlay for better text readability - NO blur on mobile */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/20 md:from-black/60 via-black/10 md:via-black/50 to-black/20 md:to-black/60"></div>
+      {/* Overlay for better text readability - Strong on desktop, minimal on mobile for parallax visibility */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/30 md:from-black/60 via-black/20 md:via-black/50 to-black/30 md:to-black/60"></div>
       
       <div className="max-w-7xl mx-auto relative z-10">
         <h2 className="text-5xl md:text-6xl font-serif font-bold text-white mb-4 tracking-tight leading-tight">
@@ -16,7 +16,7 @@ export function FormatSection() {
         </h2>
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">
-          <div className="bg-secondary/30 backdrop-blur p-10 border border-border/50 space-y-4 hover:bg-white/10 transition-colors">
+          <div className="bg-secondary/30 p-10 border border-border/50 space-y-4 hover:bg-white/10 transition-colors md:backdrop-blur">
             <div className="w-12 h-12 bg-accent/20 rounded flex items-center justify-center">
               <span className="text-white font-serif text-2xl">①</span>
             </div>
@@ -26,7 +26,7 @@ export function FormatSection() {
             </p>
           </div>
 
-          <div className="bg-secondary/30 backdrop-blur p-10 border border-border/50 space-y-4 hover:bg-white/10 transition-colors">
+          <div className="bg-secondary/30 p-10 border border-border/50 space-y-4 hover:bg-white/10 transition-colors md:backdrop-blur">
             <div className="w-12 h-12 bg-accent/20 rounded flex items-center justify-center">
               <span className="text-white font-serif text-2xl">②</span>
             </div>
@@ -36,7 +36,7 @@ export function FormatSection() {
             </p>
           </div>
 
-          <div className="bg-secondary/30 backdrop-blur p-10 border border-border/50 space-y-4 hover:bg-white/10 transition-colors">
+          <div className="bg-secondary/30 p-10 border border-border/50 space-y-4 hover:bg-white/10 transition-colors md:backdrop-blur">
             <div className="w-12 h-12 bg-accent/20 rounded flex items-center justify-center">
               <span className="text-white font-serif text-2xl">③</span>
             </div>

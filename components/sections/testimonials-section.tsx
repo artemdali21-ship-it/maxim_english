@@ -18,19 +18,16 @@ export function TestimonialsSection() {
   ];
 
   return (
-    <section id="testimonials" className="py-20 md:py-28 px-6 bg-background relative overflow-hidden">
-      {/* Background Image - Parallax Fixed on all devices */}
-      <div className="absolute inset-0 opacity-100 md:opacity-25" style={{
-        backgroundImage: 'url(/testimonials-bg.png)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center 30%',
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'fixed'
-      }}>
-        {/* Shadow effect for depth - stronger on mobile */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 md:from-black/30 via-black/30 md:via-transparent to-transparent"></div>
-        <div className="absolute bottom-0 left-0 right-0 h-96 bg-gradient-to-t from-background via-background/50 to-transparent"></div>
-      </div>
+    <section id="testimonials" className="py-20 md:py-28 px-6 bg-background relative overflow-hidden" style={{
+      backgroundImage: 'url(/testimonials-bg.png)',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center 30%',
+      backgroundRepeat: 'no-repeat',
+      backgroundAttachment: 'fixed'
+    }}>
+      {/* Shadow effect for depth - stronger on mobile */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 md:from-black/30 via-black/40 md:via-transparent to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-96 bg-gradient-to-t from-background via-background/50 to-transparent"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         <h2 className="text-5xl md:text-6xl font-serif font-bold text-primary mb-4 tracking-tight leading-tight">
@@ -40,7 +37,7 @@ export function TestimonialsSection() {
         
         <div className="grid md:grid-cols-3 gap-8 mt-16">
           {testimonials.map((testimonial, idx) => (
-            <div key={idx} className="bg-secondary/50 backdrop-blur p-10 border border-border/50 space-y-6">
+            <div key={idx} className="bg-secondary/50 p-10 border border-border/50 space-y-6 md:backdrop-blur">
               <p className="text-foreground/90 leading-relaxed italic font-light">"{testimonial.quote}"</p>
               <div className="border-t border-border/30 pt-6 space-y-1">
                 <p className="font-serif font-semibold text-primary">{testimonial.name}</p>
