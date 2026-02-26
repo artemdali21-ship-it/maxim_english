@@ -16,7 +16,7 @@ export function FormatSection() {
         </h2>
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">
-          <div className="bg-secondary/30 p-10 border border-border/50 space-y-4 hover:bg-white/10 transition-colors md:backdrop-blur-sm">
+          <div className="bg-secondary/10 md:bg-secondary/30 p-10 border border-border/30 md:border-border/50 space-y-4 hover:bg-white/10 transition-colors md:backdrop-blur-sm">
             <div className="w-12 h-12 bg-accent/20 rounded flex items-center justify-center">
               <span className="text-white font-serif text-2xl">①</span>
             </div>
@@ -26,7 +26,7 @@ export function FormatSection() {
             </p>
           </div>
 
-          <div className="bg-secondary/30 p-10 border border-border/50 space-y-4 hover:bg-white/10 transition-colors md:backdrop-blur-sm">
+          <div className="bg-secondary/10 md:bg-secondary/30 p-10 border border-border/30 md:border-border/50 space-y-4 hover:bg-white/10 transition-colors md:backdrop-blur-sm">
             <div className="w-12 h-12 bg-accent/20 rounded flex items-center justify-center">
               <span className="text-white font-serif text-2xl">②</span>
             </div>
@@ -36,7 +36,7 @@ export function FormatSection() {
             </p>
           </div>
 
-          <div className="bg-secondary/30 p-10 border border-border/50 space-y-4 hover:bg-white/10 transition-colors md:backdrop-blur-sm">
+          <div className="bg-secondary/10 md:bg-secondary/30 p-10 border border-border/30 md:border-border/50 space-y-4 hover:bg-white/10 transition-colors md:backdrop-blur-sm">
             <div className="w-12 h-12 bg-accent/20 rounded flex items-center justify-center">
               <span className="text-white font-serif text-2xl">③</span>
             </div>

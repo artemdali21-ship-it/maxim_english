@@ -43,9 +43,9 @@ export function HeroSection() {
           </h1>
         </div>
 
-        {/* PHOTO - Small on mobile (left), full on desktop (right) */}
-        <div className="relative order-2 md:order-2 w-1/3 md:w-full">
-          <div className="relative w-full aspect-video md:aspect-square overflow-hidden border-2 md:border-6 border-[#F7F5F0]" style={{
+        {/* PHOTO - Full width vertical on mobile, full width square on desktop (right) */}
+        <div className="relative order-2 md:order-2 w-full md:w-full">
+          <div className="relative w-full aspect-square overflow-hidden border-4 md:border-6 border-[#F7F5F0]" style={{
             boxShadow: '0 4px 16px rgba(0, 0, 0, 0.15)'
           }}>
             <Image
