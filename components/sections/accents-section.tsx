@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 export function AccentsSection() {
   return (
     <section id="accents" className="py-16 md:py-24 px-4 md:px-6 bg-background">
@@ -14,67 +16,77 @@ export function AccentsSection() {
 
         {/* Audio Player */}
         <div className="bg-secondary rounded p-8 mb-12 border border-border">
-          <div className="flex items-center gap-4 mb-4">
-            <button className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:opacity-90 transition flex-shrink-0 text-2xl">
-              ▶
-            </button>
-            <div className="flex-1">
-              <div className="h-2 bg-border rounded-full mb-2"></div>
-              <p className="text-sm text-muted-foreground">
-                Послушайте, как Максим переключается между четырьмя акцентами
-              </p>
-            </div>
-            <span className="text-sm text-muted-foreground whitespace-nowrap">1:47</span>
+          <div className="flex flex-col gap-4">
+            <audio controls className="w-full">
+              <source src="/maxim-pronunciation.mp3" type="audio/mpeg" />
+              Your browser does not support the audio element.
+            </audio>
+            <p className="text-sm text-muted-foreground text-center">
+              Послушайте, как Максим переключается между четырьмя акцентами
+            </p>
           </div>
-          <audio controls className="w-full hidden">
-            <source src="/audio/accents-demo.mp3" type="audio/mpeg" />
-          </audio>
         </div>
 
         {/* Accent Cards Grid */}
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          {/* Card 1 */}
-          <div className="bg-secondary p-8 rounded border border-border">
-            <h3 className="text-xl font-bold text-primary mb-4 font-space-grotesk">Парень с улицы</h3>
-            <p className="text-sm italic text-foreground mb-4 leading-relaxed">
-              "Do you know what, mate? I don't like that buff geezer sitting there in the corner. He's a bit of a wanker, isn't he? Better yet, I've got enough of the bottle to make him put a sock in it."
-            </p>
-            <p className="text-sm text-muted-foreground">
-              Уличный лондонский. Болельщик Arsenal. Пабы и прямой разговор.
-            </p>
+          {/* Card 1 - London */}
+          <div className="group relative rounded overflow-hidden border border-border hover:border-accent transition cursor-pointer h-96">
+            <Image
+              src="/accent-london.jpg"
+              alt="London Calling - Британский уличный английский"
+              fill
+              className="object-cover group-hover:scale-105 transition duration-300"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+            <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+              <h3 className="text-xl font-bold mb-2">London Calling</h3>
+              <p className="text-sm">Уличный лондонский. Живой, энергичный.</p>
+            </div>
           </div>
 
-          {/* Card 2 */}
-          <div className="bg-secondary p-8 rounded border border-border">
-            <h3 className="text-xl font-bold text-primary mb-4 font-space-grotesk">Кембриджский профессор</h3>
-            <p className="text-sm italic text-foreground mb-4 leading-relaxed">
-              "A professor of Cambridge who would possibly give you a few nice comments on the way educated people should speak. Surrounded by well-mannered students who might have gone through a fairly similar system."
-            </p>
-            <p className="text-sm text-muted-foreground">
-              Академический английский. Безупречная точность формулировок.
-            </p>
+          {/* Card 2 - Harvard */}
+          <div className="group relative rounded overflow-hidden border border-border hover:border-accent transition cursor-pointer h-96">
+            <Image
+              src="/accent-harvard.jpg"
+              alt="Harvard Accent - Американский английский"
+              fill
+              className="object-cover group-hover:scale-105 transition duration-300"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+            <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+              <h3 className="text-xl font-bold mb-2">General American</h3>
+              <p className="text-sm">Деловой, прямолинейный американский.</p>
+            </div>
           </div>
 
-          {/* Card 3 */}
-          <div className="bg-secondary p-8 rounded border border-border">
-            <h3 className="text-xl font-bold text-primary mb-4 font-space-grotesk">Аристократ из Downton Abbey</h3>
-            <p className="text-sm italic text-foreground mb-4 leading-relaxed">
-              "This would parade your highly appreciated nature of aristocratic fashions, your arrogance, your outdated obsession of victorious and splendid history of the British Empire."
-            </p>
-            <p className="text-sm text-muted-foreground">
-              Posh English. Аристократическая речь. RP-произношение.
-            </p>
+          {/* Card 3 - Downton Abbey */}
+          <div className="group relative rounded overflow-hidden border border-border hover:border-accent transition cursor-pointer h-96">
+            <Image
+              src="/accent-downton.jpg"
+              alt="Downton Abbey - Posh Upper Class английский"
+              fill
+              className="object-cover group-hover:scale-105 transition duration-300"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+            <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+              <h3 className="text-xl font-bold mb-2">Posh Upper Class</h3>
+              <p className="text-sm">Аристократический, элегантный английский.</p>
+            </div>
           </div>
 
-          {/* Card 4 */}
-          <div className="bg-secondary p-8 rounded border border-border">
-            <h3 className="text-xl font-bold text-primary mb-4 font-space-grotesk">Американский сенатор</h3>
-            <p className="text-sm italic text-foreground mb-4 leading-relaxed">
-              "I gotta tell you this: our economy is gonna decline, so we gotta reduce taxes. No arguments. That's our future."
-            </p>
-            <p className="text-sm text-muted-foreground">
-              General American. Деловой тон. Прямолинейность.
-            </p>
+          {/* Card 4 - Cambridge */}
+          <div className="group relative rounded overflow-hidden border border-border hover:border-accent transition cursor-pointer h-96">
+            <Image
+              src="/accent-cambridge.jpg"
+              alt="Cambridge Professor - Академический английский"
+              fill
+              className="object-cover group-hover:scale-105 transition duration-300"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+            <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+              <h3 className="text-xl font-bold mb-2">RP Academic</h3>
+              <p className="text-sm">Академический, безупречный английский.</p>
+            </div>
           </div>
         </div>
 
