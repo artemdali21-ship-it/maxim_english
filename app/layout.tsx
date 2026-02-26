@@ -100,20 +100,6 @@ export default function RootLayout({
               transform: translateY(0);
             }
           }
-          
-          @media (max-width: 767px) {
-            .parallax-bg {
-              background-attachment: fixed;
-              background-size: contain !important;
-            }
-          }
-          
-          @media (min-width: 768px) {
-            .parallax-bg {
-              background-attachment: fixed;
-              background-size: cover !important;
-            }
-          }
         `}</style>
       </head>
       <body className="font-sans antialiased bg-background text-foreground">
