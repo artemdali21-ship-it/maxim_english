@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export function LibrarySection() {
   return (
-    <section id="library" className="relative py-16 md:py-32 px-4 md:px-6 text-white overflow-hidden bg-gradient-to-b from-gray-900 to-black">
+    <section id="library" className="relative py-16 md:py-32 px-4 md:px-6 text-white overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
         <Image
