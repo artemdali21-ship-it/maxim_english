@@ -8,25 +8,23 @@ export function HeroSection() {
       id="hero" 
       className="relative pt-24 pb-20 md:pt-32 md:pb-32 px-6 min-h-screen flex items-center overflow-hidden bg-black"
     >
-      {/* Background Video - positioned absolutely, smaller on mobile */}
+      {/* Background Video - positioned absolutely */}
       <div className="absolute inset-0 w-full h-full" style={{ zIndex: 0 }}>
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="w-full h-full object-cover md:object-cover object-center md:object-right"
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: '50% 50%',
+            transform: 'scale(1.2)'
+          }}
           crossOrigin="anonymous"
         >
           <source src="/hero-bg.mp4" type="video/mp4" />
-          {/* Fallback image if video doesn't load */}
-          <Image
-            src="/hero-bg-oxford.jpg"
-            alt="Oxford University courtyard"
-            fill
-            className="object-cover"
-            priority
-          />
         </video>
       </div>
 
@@ -37,13 +35,33 @@ export function HeroSection() {
       ></div>
 
       {/* Content */}
-      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 items-start md:items-center relative" style={{ zIndex: 10, minHeight: 'auto' }}>
-        <div className="space-y-6 md:space-y-8 order-2 md:order-1">
+      <div className="max-w-7xl mx-auto w-full flex flex-col md:grid md:grid-cols-2 gap-4 md:gap-16 items-start md:items-center relative" style={{ zIndex: 10 }}>
+        {/* TITLE - First on mobile, second on desktop */}
+        <div className="w-full order-1 md:order-1">
           <h1 className="text-4xl md:text-7xl font-serif font-bold text-white leading-tight tracking-tight">
             Не обещаю<br />быстро.<br />
             <span className="text-accent">Обещаю правильно.</span>
           </h1>
-          
+        </div>
+
+        {/* PHOTO - Second on mobile, second on desktop */}
+        <div className="relative order-2 md:order-2 w-full md:w-full">
+          <div className="relative w-4/5 md:w-full mx-auto md:mx-0 aspect-square overflow-hidden border-4 md:border-6 border-[#F7F5F0]" style={{
+            boxShadow: '0 4px 16px rgba(0, 0, 0, 0.15)'
+          }}>
+            <Image
+              src="/maxim-balcony.jpg"
+              alt="Максим Онуфриев - портрет"
+              fill
+              className="object-cover hover:scale-105 transition-transform duration-500"
+              priority
+            />
+            <div className="absolute inset-0 border border-white/5"></div>
+          </div>
+        </div>
+
+        {/* DESCRIPTION & CTA - Third on mobile, first on desktop */}
+        <div className="space-y-6 md:space-y-8 order-3 md:order-1 w-full md:w-auto md:col-span-2 lg:col-span-1">
           <p className="text-base md:text-lg text-white/95 leading-relaxed max-w-xl font-light">
             Максим Онуфриев — филолог МГУ, преподаватель английского с 2010 года. Авторская система: грамматика, живая речь, фонетика и произношение как единая структура языка.
           </p>
@@ -67,21 +85,6 @@ export function HeroSection() {
             <p className="text-sm text-white font-medium">
               Осталось 3 свободных места
             </p>
-          </div>
-        </div>
-
-        <div className="relative order-1 md:order-2 w-full md:w-full mt-6 md:mt-0">
-          <div className="relative w-4/5 md:w-full mx-auto md:mx-0 aspect-square overflow-hidden border-4 md:border-6 border-[#F7F5F0]" style={{
-            boxShadow: '0 4px 16px rgba(0, 0, 0, 0.15)'
-          }}>
-            <Image
-              src="/maxim-balcony.jpg"
-              alt="Максим Онуфриев - портрет"
-              fill
-              className="object-cover hover:scale-105 transition-transform duration-500"
-              priority
-            />
-            <div className="absolute inset-0 border border-white/5"></div>
           </div>
         </div>
       </div>

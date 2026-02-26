@@ -19,12 +19,13 @@ export function TestimonialsSection() {
 
   return (
     <section id="testimonials" className="py-20 md:py-28 px-6 bg-background relative overflow-hidden">
-      {/* Background Image - Full screen on mobile, positioned properly */}
+      {/* Background Image - Parallax Fixed on all devices */}
       <div className="absolute inset-0 opacity-100 md:opacity-25" style={{
         backgroundImage: 'url(/testimonials-bg.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center 30%',
-        backgroundRepeat: 'no-repeat'
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed'
       }}>
         {/* Shadow effect for depth - stronger on mobile */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 md:from-black/30 via-black/30 md:via-transparent to-transparent"></div>
