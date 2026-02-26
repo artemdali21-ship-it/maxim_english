@@ -5,9 +5,11 @@ export function FooterSection() {
     <footer className="bg-primary text-primary-foreground border-t border-primary/20">
       <div className="max-w-7xl mx-auto px-6 py-16 md:py-20">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
-          {/* Brand */}
+          {/* Brand - Russian */}
           <div>
-            <h3 className="text-2xl font-serif font-bold mb-2">Maxim</h3>
+            <h3 className="text-2xl font-serif font-bold mb-2">
+              Максим Онуфриев
+            </h3>
             <p className="text-xs uppercase tracking-widest text-primary-foreground/70">
               English Language Education
             </p>
@@ -15,7 +17,7 @@ export function FooterSection() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider mb-4">Contact</h4>
+            <h4 className="text-sm font-semibold uppercase tracking-wider mb-4">Контакты</h4>
             <a 
               href="https://t.me/Max_Onny"
               target="_blank"
@@ -28,31 +30,31 @@ export function FooterSection() {
 
           {/* Legal */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider mb-4">Legal</h4>
+            <h4 className="text-sm font-semibold uppercase tracking-wider mb-4">Документы</h4>
             <div className="space-y-2 text-sm">
               <Link 
                 href="/public-offer"
                 className="block text-primary-foreground/80 hover:text-accent transition-colors"
               >
-                Public Offer
+                Оферта
               </Link>
               <Link 
                 href="/terms-of-service"
                 className="block text-primary-foreground/80 hover:text-accent transition-colors"
               >
-                Terms
+                Условия использования
               </Link>
               <Link 
                 href="/privacy-policy"
                 className="block text-primary-foreground/80 hover:text-accent transition-colors"
               >
-                Privacy
+                Конфиденциальность
               </Link>
               <Link 
                 href="/cookie-policy"
                 className="block text-primary-foreground/80 hover:text-accent transition-colors"
               >
-                Cookies
+                Cookie
               </Link>
             </div>
           </div>
@@ -60,10 +62,10 @@ export function FooterSection() {
 
         <div className="border-t border-primary-foreground/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-primary-foreground/60">
-            © 2026 Maxim Onufriev. All rights reserved.
+            © 2026 Максим Онуфриев. Все права защищены.
           </p>
           <p className="text-xs text-primary-foreground/60">
-            Designed for excellence in language education
+            Качественное образование в английском языке
           </p>
         </div>
       </div>

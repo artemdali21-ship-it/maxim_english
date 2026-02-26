@@ -7,15 +7,17 @@ export function HeroSection() {
     <section id="hero" className="relative pt-24 pb-20 md:pt-32 md:pb-32 px-6 min-h-screen flex items-center overflow-hidden">
       {/* Background Image with overlay */}
       <Image
-        src="/hero-bg.jpg"
+        src="/hero-bg-oxford.jpg"
         alt="Oxford University courtyard"
         fill
         className="absolute inset-0 object-cover -z-20"
         priority
       />
       
-      {/* Geometric overlay - from brief */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-transparent -z-10"></div>
+      {/* Enhanced geometric overlay for better text readability */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/20 -z-10"></div>
+      {/* Additional dark overlay on left side for text */}
+      <div className="absolute left-0 top-0 bottom-0 w-1/2 bg-gradient-to-r from-black/50 to-transparent -z-10"></div>
 
       <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-16 items-center relative z-10">
         <div className="space-y-8">
