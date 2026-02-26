@@ -343,10 +343,10 @@
   animation: fadeIn 0.7s ease-out forwards;
 }
 
-/* Parallax backgrounds - scroll on mobile, fixed on desktop */
+/* Parallax backgrounds - fixed on both mobile and desktop, only change background-size */
 @media (max-width: 767px) {
   .parallax-bg {
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-size: contain !important;
   }
 }
