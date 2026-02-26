@@ -23,7 +23,7 @@ export function HeroSection() {
           }}
           crossOrigin="anonymous"
         >
-          <source src="/hero-bg.mp4" type="video/mp4" />
+          <source src="/hero-video.mp4" type="video/mp4" />
         </video>
       </div>
 
