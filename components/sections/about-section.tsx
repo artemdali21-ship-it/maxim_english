@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export function AboutSection() {
   return (
     <section id="about" className="py-16 md:py-24 px-4 md:px-6 bg-background">
@@ -7,8 +9,14 @@ export function AboutSection() {
         </h2>
 
         <div className="grid md:grid-cols-2 gap-12 mb-16">
-          <div className="bg-secondary rounded aspect-square border border-border flex items-center justify-center text-muted-foreground">
-            [Фото Максима]
+          <div className="relative rounded overflow-hidden border border-border aspect-square">
+            <Image
+              src="/maxim-portrait.jpg"
+              alt="Максим Онуфриев - профессиональный портрет"
+              fill
+              className="object-cover"
+              priority
+            />
           </div>
           <div className="space-y-6 text-foreground leading-relaxed">
             <p>

@@ -1,7 +1,21 @@
+import Image from 'next/image';
+
 export function PhilosophySection() {
   return (
-    <section id="philosophy" className="py-16 md:py-24 px-4 md:px-6 text-primary-foreground" style={{ backgroundColor: '#0F1A2E' }}>
-      <div className="max-w-7xl mx-auto">
+    <section id="philosophy" className="relative py-16 md:py-32 px-4 md:px-6 text-primary-foreground overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 -z-10">
+        <Image
+          src="/philosophy-library.jpg"
+          alt="Premium library with wooden shelves and books"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/60"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
         <h2 className="text-4xl md:text-5xl font-bold mb-12 font-space-grotesk tracking-tight leading-tight">
           «Выучить английский за два месяца»?<br />Давайте начистоту.
         </h2>

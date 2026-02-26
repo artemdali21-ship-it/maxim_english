@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 export function HeroSection() {
   return (
     <section id="hero" className="pt-32 pb-16 md:pt-40 md:pb-24 px-4 md:px-6 bg-background min-h-screen flex items-center">
@@ -34,8 +36,14 @@ export function HeroSection() {
             </p>
           </div>
         </div>
-        <div className="bg-secondary rounded aspect-square flex items-center justify-center text-muted-foreground border border-border">
-          [Фото Максима — поясной портрет]
+        <div className="relative rounded aspect-square overflow-hidden border border-border">
+          <Image
+            src="/maxim-corporate.jpg"
+            alt="Максим Онуфриев - портрет"
+            fill
+            className="object-cover"
+            priority
+          />
         </div>
       </div>
     </section>
