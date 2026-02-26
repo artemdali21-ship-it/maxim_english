@@ -2,19 +2,19 @@ import Image from 'next/image';
 
 export function LibrarySection() {
   return (
-    <section id="library" className="relative py-16 md:py-32 px-4 md:px-6 text-white overflow-hidden bg-black/40">
-      {/* Background Image */}
-      <div className="absolute inset-0 -z-10">
-        <Image
-          src="/library-bg.jpg"
-          alt="Премиум домашняя библиотека с деревянными полками и кожаным диваном"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/75"></div>
-      </div>
+    <section id="library" className="relative py-16 md:py-32 px-4 md:px-6 text-white overflow-hidden">
+      {/* Background Image Layer */}
+      <Image
+        src="/library-bg.jpg"
+        alt="Премиум домашняя библиотека с деревянными полками и кожаным диваном"
+        fill
+        className="absolute inset-0 object-cover -z-20"
+        priority
+      />
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/60 -z-10"></div>
 
+      {/* Content */}
       <div className="max-w-7xl mx-auto relative z-10">
         <h2 className="text-4xl md:text-5xl font-bold mb-12 font-space-grotesk tracking-tight leading-tight">
           Знания — это структура, не информация
