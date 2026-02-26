@@ -28,7 +28,7 @@ export function TrustBarSection() {
                 alt={logo.alt}
                 width={logo.width}
                 height={logo.height}
-                className="object-contain w-auto h-auto group-hover:scale-110 transition-transform duration-300"
+                className="object-contain max-h-10 w-auto group-hover:scale-110 transition-transform duration-300"
               />
             </div>
           ))}
