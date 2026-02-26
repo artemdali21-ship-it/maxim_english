@@ -49,11 +49,6 @@ export function PhilosophySection() {
           <p className="text-lg font-serif font-semibold">— Максим Онуфриев</p>
         </div>
       </div>
-
-        <div className="mt-12 pt-8 border-t border-primary-foreground/20 text-right">
-          <p className="text-lg font-semibold">— Максим Онуфриев</p>
-        </div>
-      </div>
     </section>
   );
 }
