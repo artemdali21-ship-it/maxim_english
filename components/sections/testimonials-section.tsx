@@ -19,15 +19,15 @@ export function TestimonialsSection() {
 
   return (
     <section id="testimonials" className="py-20 md:py-28 px-6 bg-background relative overflow-hidden">
-      {/* Background Image with Shadow Effect */}
-      <div className="absolute inset-0 opacity-25" style={{
+      {/* Background Image - Full screen on mobile, positioned properly */}
+      <div className="absolute inset-0 opacity-100 md:opacity-25" style={{
         backgroundImage: 'url(/testimonials-bg.png)',
-        backgroundSize: '115%',
+        backgroundSize: 'cover',
         backgroundPosition: 'center 30%',
         backgroundRepeat: 'no-repeat'
       }}>
-        {/* Shadow effect for depth */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+        {/* Shadow effect for depth - stronger on mobile */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 md:from-black/30 via-black/30 md:via-transparent to-transparent"></div>
         <div className="absolute bottom-0 left-0 right-0 h-96 bg-gradient-to-t from-background via-background/50 to-transparent"></div>
       </div>
 

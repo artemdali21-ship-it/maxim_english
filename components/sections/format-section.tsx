@@ -6,8 +6,8 @@ export function FormatSection() {
       backgroundPosition: 'center',
       backgroundAttachment: 'fixed'
     }}>
-      {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/50 to-black/60"></div>
+      {/* Overlay for better text readability - lighter on mobile */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/40 md:from-black/60 via-black/30 md:via-black/50 to-black/40 md:to-black/60"></div>
       
       <div className="max-w-7xl mx-auto relative z-10">
         <h2 className="text-5xl md:text-6xl font-serif font-bold text-white mb-4 tracking-tight leading-tight">

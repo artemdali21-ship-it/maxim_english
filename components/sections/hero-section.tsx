@@ -8,14 +8,14 @@ export function HeroSection() {
       id="hero" 
       className="relative pt-24 pb-20 md:pt-32 md:pb-32 px-6 min-h-screen flex items-center overflow-hidden bg-black"
     >
-      {/* Background Video - positioned absolutely */}
+      {/* Background Video - positioned absolutely, smaller on mobile */}
       <div className="absolute inset-0 w-full h-full" style={{ zIndex: 0 }}>
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover md:object-cover object-center md:object-right"
           crossOrigin="anonymous"
         >
           <source src="/hero-bg.mp4" type="video/mp4" />
@@ -37,14 +37,14 @@ export function HeroSection() {
       ></div>
 
       {/* Content */}
-      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center relative" style={{ zIndex: 10 }}>
-        <div className="space-y-8 order-2 md:order-1">
-          <h1 className="text-6xl md:text-7xl font-serif font-bold text-white leading-tight tracking-tight">
+      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16 items-start md:items-center relative" style={{ zIndex: 10, minHeight: 'auto' }}>
+        <div className="space-y-6 md:space-y-8 order-2 md:order-1">
+          <h1 className="text-4xl md:text-7xl font-serif font-bold text-white leading-tight tracking-tight">
             Не обещаю<br />быстро.<br />
             <span className="text-accent">Обещаю правильно.</span>
           </h1>
           
-          <p className="text-lg text-white/95 leading-relaxed max-w-xl font-light">
+          <p className="text-base md:text-lg text-white/95 leading-relaxed max-w-xl font-light">
             Максим Онуфриев — филолог МГУ, преподаватель английского с 2010 года. Авторская система: грамматика, живая речь, фонетика и произношение как единая структура языка.
           </p>
 
@@ -70,8 +70,8 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="relative order-1 md:order-2">
-          <div className="relative w-full aspect-square overflow-hidden border-6 border-[#F7F5F0]" style={{
+        <div className="relative order-1 md:order-2 w-full md:w-full mt-6 md:mt-0">
+          <div className="relative w-4/5 md:w-full mx-auto md:mx-0 aspect-square overflow-hidden border-4 md:border-6 border-[#F7F5F0]" style={{
             boxShadow: '0 4px 16px rgba(0, 0, 0, 0.15)'
           }}>
             <Image
