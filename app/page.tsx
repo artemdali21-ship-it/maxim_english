@@ -1,12 +1,15 @@
 import { Header } from "@/components/header";
 import { HeroSection } from "@/components/sections/hero-section";
+import { TrustBarSection } from "@/components/sections/trust-bar-section";
+import { AboutSection } from "@/components/sections/about-section";
 import { PhilosophySection } from "@/components/sections/philosophy-section";
-import { FeaturedProductsSection } from "@/components/sections/featured-products-section";
-import { TechnologySection } from "@/components/sections/technology-section";
-import { GallerySection } from "@/components/sections/gallery-section";
-import { CollectionSection } from "@/components/sections/collection-section";
-import { EditorialSection } from "@/components/sections/editorial-section";
+import { AccentsSection } from "@/components/sections/accents-section";
+import { MethodSection } from "@/components/sections/method-section";
+import { FormatSection } from "@/components/sections/format-section";
+import { ForWhomSection } from "@/components/sections/for-whom-section";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
+import { IdiomSection } from "@/components/sections/idiom-section";
+import { CTASection } from "@/components/sections/cta-section";
 import { FooterSection } from "@/components/sections/footer-section";
 
 export default function Home() {
@@ -14,13 +17,16 @@ export default function Home() {
     <main className="min-h-screen bg-background">
       <Header />
       <HeroSection />
+      <TrustBarSection />
+      <AboutSection />
       <PhilosophySection />
-      <FeaturedProductsSection />
-      <TechnologySection />
-      <GallerySection />
-      <CollectionSection />
-      <EditorialSection />
+      <AccentsSection />
+      <MethodSection />
+      <FormatSection />
+      <ForWhomSection />
       <TestimonialsSection />
+      <IdiomSection />
+      <CTASection />
       <FooterSection />
     </main>
   );

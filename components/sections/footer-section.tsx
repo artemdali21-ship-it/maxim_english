@@ -1,126 +1,53 @@
-"use client";
-
-import Link from "next/link";
-
-const footerLinks = {
-  explore: [
-    { label: "Products", href: "#products" },
-    { label: "Technology", href: "#technology" },
-    { label: "Gallery", href: "#gallery" },
-    { label: "Accessories", href: "#accessories" },
-  ],
-  about: [
-    { label: "Our Story", href: "#" },
-    { label: "Team", href: "#" },
-    { label: "Careers", href: "#" },
-    { label: "Contact", href: "#" },
-  ],
-  service: [
-    { label: "FAQ", href: "#" },
-    { label: "Shipping", href: "#" },
-    { label: "Returns", href: "#" },
-    { label: "Warranty", href: "#" },
-  ],
-};
+import Link from 'next/link';
 
 export function FooterSection() {
   return (
-    <footer className="bg-background">
-      {/* Main Footer Content */}
-      <div className="border-t border-border px-6 py-16 md:px-12 md:py-20 lg:px-20">
-        <div className="grid grid-cols-2 gap-12 md:grid-cols-4 lg:grid-cols-5">
-          {/* Brand */}
-          <div className="col-span-2 md:col-span-1 lg:col-span-2">
-            <Link href="/" className="text-lg font-medium text-foreground">
-              EVASION
-            </Link>
-            <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
-              Premium smart bottles engineered for adventure. GPS tracking, LED flashlight, and self-heating technology.
-            </p>
-          </div>
-
-          {/* Explore */}
+    <footer className="bg-primary text-primary-foreground">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 py-16 md:py-20">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12">
           <div>
-            <h4 className="mb-4 text-sm font-medium text-foreground">Explore</h4>
-            <ul className="space-y-3">
-              {footerLinks.explore.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+            <h4 className="font-bold mb-4">Services</h4>
+            <ul className="space-y-2 text-sm opacity-80">
+              <li><a href="#method" className="hover:opacity-100 transition">Method</a></li>
+              <li><a href="#format" className="hover:opacity-100 transition">Formats</a></li>
+              <li><a href="#accents" className="hover:opacity-100 transition">Accents</a></li>
+              <li><a href="#pricing" className="hover:opacity-100 transition">Pricing</a></li>
             </ul>
           </div>
-
-          {/* About */}
           <div>
-            <h4 className="mb-4 text-sm font-medium text-foreground">About</h4>
-            <ul className="space-y-3">
-              {footerLinks.about.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+            <h4 className="font-bold mb-4">About</h4>
+            <ul className="space-y-2 text-sm opacity-80">
+              <li><a href="#about" className="hover:opacity-100 transition">About Maxim</a></li>
+              <li><a href="#philosophy" className="hover:opacity-100 transition">Philosophy</a></li>
+              <li><a href="#testimonials" className="hover:opacity-100 transition">Reviews</a></li>
+              <li><a href="#contact" className="hover:opacity-100 transition">Contact</a></li>
             </ul>
           </div>
-
-          {/* Service */}
           <div>
-            <h4 className="mb-4 text-sm font-medium text-foreground">Service</h4>
-            <ul className="space-y-3">
-              {footerLinks.service.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+            <h4 className="font-bold mb-4">Resources</h4>
+            <ul className="space-y-2 text-sm opacity-80">
+              <li><a href="#" className="hover:opacity-100 transition">FAQ</a></li>
+              <li><a href="#" className="hover:opacity-100 transition">Blog</a></li>
+              <li><a href="#" className="hover:opacity-100 transition">Privacy</a></li>
+              <li><a href="#" className="hover:opacity-100 transition">Terms</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-bold mb-4">Connect</h4>
+            <ul className="space-y-2 text-sm opacity-80">
+              <li><a href="#" className="hover:opacity-100 transition">LinkedIn</a></li>
+              <li><a href="#" className="hover:opacity-100 transition">Instagram</a></li>
+              <li><a href="#" className="hover:opacity-100 transition">Email</a></li>
+              <li><a href="#" className="hover:opacity-100 transition">WhatsApp</a></li>
             </ul>
           </div>
         </div>
-      </div>
 
-      {/* Bottom Bar */}
-      <div className="border-t border-border px-6 py-6 md:px-12 lg:px-20">
-        <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-          <p className="text-xs text-muted-foreground">
-            2026 EVASION. All rights reserved.
-          </p>
-
-          
-
-          {/* Social Links */}
-          <div className="flex items-center gap-4">
-            <Link
-              href="#"
-              className="text-xs text-muted-foreground transition-colors hover:text-foreground"
-            >
-              Instagram
-            </Link>
-            <Link
-              href="#"
-              className="text-xs text-muted-foreground transition-colors hover:text-foreground"
-            >
-              Twitter
-            </Link>
-            <Link
-              href="#"
-              className="text-xs text-muted-foreground transition-colors hover:text-foreground"
-            >
-              YouTube
-            </Link>
+        <div className="border-t border-primary-foreground/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-sm opacity-80">© 2026 Maxim Onufriev. All rights reserved.</p>
+          <div className="flex gap-4 text-sm opacity-80">
+            <a href="#" className="hover:opacity-100 transition">Privacy Policy</a>
+            <a href="#" className="hover:opacity-100 transition">Terms of Service</a>
           </div>
         </div>
       </div>
