@@ -4,9 +4,9 @@ export function FooterSection() {
   return (
     <footer className="bg-primary text-primary-foreground border-t border-primary/20">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Main Footer Grid - Equal height sections */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-24 py-20 md:py-24">
-          {/* Brand - Russian */}
+        {/* Main Footer Grid - Proper alignment */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-24 py-20 md:py-24 items-start">
+          {/* Brand - Left */}
           <div className="space-y-3">
             <h3 className="text-2xl font-serif font-bold">
               Максим Онуфриев
@@ -16,7 +16,7 @@ export function FooterSection() {
             </p>
           </div>
 
-          {/* Contact */}
+          {/* Contact - Center */}
           <div className="space-y-4">
             <h4 className="text-sm font-semibold uppercase tracking-wider text-primary-foreground">Контакты</h4>
             <a 
@@ -29,10 +29,10 @@ export function FooterSection() {
             </a>
           </div>
 
-          {/* Legal */}
-          <div className="space-y-4">
+          {/* Legal - Right */}
+          <div className="space-y-4 md:text-right">
             <h4 className="text-sm font-semibold uppercase tracking-wider text-primary-foreground">Документы</h4>
-            <nav className="space-y-3 text-sm flex flex-col">
+            <nav className="space-y-3 text-sm flex flex-col md:items-end">
               <Link 
                 href="/public-offer"
                 className="text-primary-foreground/80 hover:text-accent transition-colors"

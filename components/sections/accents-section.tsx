@@ -27,10 +27,10 @@ export function AccentsSection() {
           </div>
         </div>
 
-        {/* Accent Cards Grid - Horizontal Banners - Compact Layout */}
-        <div className="grid grid-cols-1 gap-4 mb-16">
+        {/* Accent Cards Grid - 2x2 Layout - Horizontal Banners */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-16">
           {/* Card 1 - London */}
-          <div className="group relative overflow-hidden border border-border hover:border-accent transition h-32 md:h-40">
+          <div className="group relative overflow-hidden border border-border hover:border-accent transition h-40 md:h-48">
             <Image
               src="/accent-london-banner.jpg"
               alt="London Calling - Британский уличный английский"
@@ -40,7 +40,7 @@ export function AccentsSection() {
           </div>
 
           {/* Card 2 - Harvard */}
-          <div className="group relative overflow-hidden border border-border hover:border-accent transition h-32 md:h-40">
+          <div className="group relative overflow-hidden border border-border hover:border-accent transition h-40 md:h-48">
             <Image
               src="/accent-harvard-banner.jpg"
               alt="Harvard Accent - Американский английский"
@@ -50,7 +50,7 @@ export function AccentsSection() {
           </div>
 
           {/* Card 3 - Downton Abbey */}
-          <div className="group relative overflow-hidden border border-border hover:border-accent transition h-32 md:h-40">
+          <div className="group relative overflow-hidden border border-border hover:border-accent transition h-40 md:h-48">
             <Image
               src="/accent-downton-banner.jpg"
               alt="Downton Abbey - Posh Upper Class английский"
@@ -60,7 +60,7 @@ export function AccentsSection() {
           </div>
 
           {/* Card 4 - Cambridge */}
-          <div className="group relative overflow-hidden border border-border hover:border-accent transition h-32 md:h-40">
+          <div className="group relative overflow-hidden border border-border hover:border-accent transition h-40 md:h-48">
             <Image
               src="/accent-cambridge-banner.jpg"
               alt="Cambridge Professor - Академический английский"
