@@ -38,7 +38,7 @@ export function HeroSection() {
         </div>
         <div className="relative rounded aspect-square overflow-hidden border border-border">
           <Image
-            src="/maxim-corporate.jpg"
+            src="/maxim-balcony.jpg"
             alt="Максим Онуфриев - портрет"
             fill
             className="object-cover"
