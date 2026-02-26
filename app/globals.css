@@ -53,17 +53,6 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Parallax Background Class - Works on all screen sizes */
-.parallax-bg {
-  background-attachment: scroll;
-}
-
-@media (min-width: 768px) {
-  .parallax-bg {
-    background-attachment: fixed;
-  }
-}
-
 .dark {
   --background: #0A0A0A;
   --foreground: #FAFAFA;
@@ -352,4 +341,17 @@
 
 .animate-fade-in {
   animation: fadeIn 0.7s ease-out forwards;
+}
+
+/* Parallax backgrounds - scroll on mobile, fixed on desktop */
+@media (max-width: 767px) {
+  .parallax-bg {
+    background-attachment: scroll;
+  }
+}
+
+@media (min-width: 768px) {
+  .parallax-bg {
+    background-attachment: fixed;
+  }
 }
