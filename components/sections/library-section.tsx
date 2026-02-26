@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export function LibrarySection() {
   return (
-    <section id="library" className="relative py-16 md:py-32 px-4 md:px-6 text-white overflow-hidden">
+    <section id="library" className="relative py-16 md:py-32 px-4 md:px-6 text-white overflow-hidden bg-black/40">
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
         <Image
@@ -38,7 +38,7 @@ export function LibrarySection() {
           <p>
             <span className="font-semibold">Результат: вы застреваете на одном уровне месяцами.</span>
           </p>
-          <p className="text-xl font-semibold border-t border-primary-foreground/20 pt-6 mt-8">
+          <p className="text-xl font-semibold border-t border-white/30 pt-6 mt-8">
             На моих занятиях другой подход.
           </p>
           <p>
@@ -52,7 +52,7 @@ export function LibrarySection() {
           </p>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-primary-foreground/20 text-right">
+        <div className="mt-12 pt-8 border-t border-white/30 text-right">
           <p className="text-lg font-semibold">— Максим Онуфриев</p>
         </div>
       </div>
