@@ -27,33 +27,29 @@ export function MethodSection() {
   ];
 
   return (
-    <section id="method" className="py-16 md:py-24 px-4 md:px-6 bg-background">
+    <section id="method" className="py-20 md:py-28 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4 font-space-grotesk tracking-tight">
-          Четыре направления. Одна система.
+        <h2 className="text-5xl md:text-6xl font-serif font-bold text-primary mb-4 tracking-tight leading-tight">
+          Четыре направления.<br />
+          <span className="text-accent">Одна система.</span>
         </h2>
-        <p className="text-lg text-muted-foreground mb-12">
-          Каждое направление усиливает остальные.
+        <p className="text-lg text-foreground/80 mb-16 max-w-2xl font-light">
+          Каждое направление усиливает остальные, создавая архитектуру мастерства.
         </p>
         
         <div className="grid md:grid-cols-2 gap-8">
           {methods.map((method, idx) => (
-            <div key={idx} className="group relative overflow-hidden rounded border border-border hover:border-accent transition h-96">
-              {/* Background Image */}
+            <div key={idx} className="group relative overflow-hidden border border-border hover:border-accent transition h-96">
               <Image
                 src={method.image}
                 alt={method.title}
                 fill
-                className="object-cover group-hover:scale-105 transition duration-300"
+                className="object-cover group-hover:scale-110 transition duration-500"
               />
-              
-              {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-              
-              {/* Text Content */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
               <div className="absolute inset-0 p-8 flex flex-col justify-end text-white">
-                <h3 className="text-2xl font-bold mb-3 font-space-grotesk">{method.title}</h3>
-                <p className="text-sm leading-relaxed text-white/90">{method.description}</p>
+                <h3 className="text-2xl font-serif font-bold mb-3">{method.title}</h3>
+                <p className="text-sm leading-relaxed text-white/90 font-light">{method.description}</p>
               </div>
             </div>
           ))}

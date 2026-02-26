@@ -18,19 +18,20 @@ export function TestimonialsSection() {
   ];
 
   return (
-    <section id="testimonials" className="py-16 md:py-24 px-4 md:px-6 bg-background">
+    <section id="testimonials" className="py-20 md:py-28 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-primary mb-12 font-space-grotesk tracking-tight">
-          Что говорят ученики
+        <h2 className="text-5xl md:text-6xl font-serif font-bold text-primary mb-4 tracking-tight leading-tight">
+          Что говорят<br />
+          <span className="text-accent">ученики</span>
         </h2>
         
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 mt-16">
           {testimonials.map((testimonial, idx) => (
-            <div key={idx} className="bg-secondary p-8 border border-border rounded">
-              <p className="text-muted-foreground mb-6 leading-relaxed italic">"{testimonial.quote}"</p>
-              <div>
-                <p className="font-bold text-primary">{testimonial.name}</p>
-                <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+            <div key={idx} className="bg-secondary/50 backdrop-blur p-10 border border-border/50 space-y-6">
+              <p className="text-foreground/90 leading-relaxed italic font-light">"{testimonial.quote}"</p>
+              <div className="border-t border-border/30 pt-6 space-y-1">
+                <p className="font-serif font-semibold text-primary">{testimonial.name}</p>
+                <p className="text-xs text-muted-foreground uppercase tracking-wider">{testimonial.role}</p>
               </div>
             </div>
           ))}

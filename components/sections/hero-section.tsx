@@ -4,8 +4,8 @@ import Image from 'next/image';
 
 export function HeroSection() {
   return (
-    <section id="hero" className="relative pt-32 pb-16 md:pt-40 md:pb-24 px-4 md:px-6 min-h-screen flex items-center overflow-hidden">
-      {/* Background Image */}
+    <section id="hero" className="relative pt-24 pb-20 md:pt-32 md:pb-32 px-6 min-h-screen flex items-center overflow-hidden">
+      {/* Background Image with overlay */}
       <Image
         src="/hero-bg.jpg"
         alt="Oxford University courtyard"
@@ -14,48 +14,53 @@ export function HeroSection() {
         priority
       />
       
-      {/* Dark Overlay for text readability */}
-      <div className="absolute inset-0 bg-black/40 -z-10"></div>
+      {/* Geometric overlay - from brief */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-transparent -z-10"></div>
 
-      <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center relative z-10">
-        <div>
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight font-space-grotesk tracking-tight">
-            Не обещаю быстро.<br />Обещаю правильно.
+      <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-16 items-center relative z-10">
+        <div className="space-y-8">
+          <h1 className="text-6xl md:text-7xl font-serif font-bold text-white leading-tight tracking-tight">
+            Не обещаю<br />быстро.<br />
+            <span className="text-accent">Обещаю правильно.</span>
           </h1>
-          <p className="text-lg text-white/90 mb-8 leading-relaxed max-w-lg">
-            Максим Онуфриев — филолог МГУ, преподаватель английского с 2010 года.
-            Авторская система: грамматика, живая речь, фонетика и произношение —
-            как единая структура языка.
-            <br /><br />
-            Для взрослых и детей от 10 лет. Индивидуально. Онлайн и очно.
+          
+          <p className="text-lg text-white/95 leading-relaxed max-w-xl font-light">
+            Максим Онуфриев — филолог МГУ, преподаватель английского с 2010 года. Авторская система: грамматика, живая речь, фонетика и произношение как единая структура языка.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 mb-6">
+
+          <div className="space-y-4">
             <a 
               href="https://t.me/Max_Onny"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-3 bg-accent text-primary font-bold hover:opacity-90 transition text-center"
+              className="inline-block px-8 py-3.5 bg-accent text-accent-foreground text-sm font-semibold hover:bg-accent/90 transition-all duration-200 border border-accent/50 hover:shadow-lg hover:shadow-accent/20 hover:-translate-y-0.5"
             >
               Записаться на консультацию
             </a>
+            <p className="text-xs text-white/70 uppercase tracking-wider font-medium">
+              30 минут · Без обязательств
+            </p>
           </div>
-          <p className="text-sm text-white/80 mb-4">
-            30 минут · Обсудим ваш уровень и цели · Без обязательств
-          </p>
-          <div className="inline-block px-4 py-2 bg-red-500/90 border border-red-400 rounded">
-            <p className="text-sm font-semibold text-white">
-              Осталось 3 свободных места на март
+
+          <div className="inline-flex items-center gap-3 px-6 py-4 bg-white/5 border border-white/10 backdrop-blur-sm">
+            <div className="w-2 h-2 bg-accent rounded-full"></div>
+            <p className="text-sm text-white font-medium">
+              Осталось 3 свободных места
             </p>
           </div>
         </div>
-        <div className="relative rounded aspect-square overflow-hidden border-4 border-white/20 shadow-2xl z-20">
-          <Image
-            src="/maxim-balcony.jpg"
-            alt="Максим Онуфриев - портрет"
-            fill
-            className="object-cover"
-            priority
-          />
+
+        <div className="relative z-20 hidden md:block">
+          <div className="relative aspect-square overflow-hidden border border-white/15">
+            <Image
+              src="/maxim-balcony.jpg"
+              alt="Максим Онуфриев - портрет"
+              fill
+              className="object-cover hover:scale-105 transition-transform duration-500"
+              priority
+            />
+            <div className="absolute inset-0 border border-white/5"></div>
+          </div>
         </div>
       </div>
     </section>
