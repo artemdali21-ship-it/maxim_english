@@ -13,8 +13,8 @@ export function CTASection() {
               boxShadow: '0 8px 24px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.4)'
             }}>
               <Image
-                src="/maxim-library.jpeg"
-                alt="Максим Онуфриев в библиотеке"
+                src="/maxim-profile.jpeg"
+                alt="Максим Онуфриев - профессиональный портрет"
                 width={400}
                 height={500}
                 className="w-full h-auto object-contain block"
