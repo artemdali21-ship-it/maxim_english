@@ -2,8 +2,9 @@ import Image from 'next/image';
 
 export function LibrarySection() {
   return (
-    <section id="library" className="py-0 px-0 bg-background overflow-hidden">
-      <div className="relative w-full h-96 md:h-screen">
+    <section id="library" className="relative py-16 md:py-32 px-4 md:px-6 text-primary-foreground overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 -z-10">
         <Image
           src="/library-hero.jpg"
           alt="Премиум домашняя библиотека с деревянными полками и кожаным диваном"
@@ -11,15 +12,48 @@ export function LibrarySection() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/40"></div>
-        
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
-          <h3 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 font-space-grotesk tracking-tight max-w-4xl leading-tight">
-            Знания — это структура, не информация
-          </h3>
-          <p className="text-lg md:text-xl max-w-2xl text-white/90 leading-relaxed">
+        <div className="absolute inset-0 bg-black/60"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
+        <h2 className="text-4xl md:text-5xl font-bold mb-12 font-space-grotesk tracking-tight leading-tight">
+          Знания — это структура, не информация
+        </h2>
+
+        <div className="max-w-4xl text-lg leading-relaxed space-y-6">
+          <p>
             Каждый кирпичик на месте. Каждое правило служит смыслу.
+            Не случайный набор фактов, а единая архитектура языка.
           </p>
+          <p>
+            Когда вы учите английский отрывочно — по видео-урокам,
+            курсам в приложениях, спонтанным советам в интернете —
+            у вас в голове собирается хаос.
+          </p>
+          <p>
+            Вы учите фразы, но не понимаете, почему именно так.
+            Вы говорите, но не слышите. Вы запоминаете правила,
+            но не видите, как они работают в живой речи.
+          </p>
+          <p>
+            <span className="font-semibold">Результат: вы застреваете на одном уровне месяцами.</span>
+          </p>
+          <p className="text-xl font-semibold border-t border-primary-foreground/20 pt-6 mt-8">
+            На моих занятиях другой подход.
+          </p>
+          <p>
+            Мы начинаем не с фраз. Мы начинаем со структуры.
+            Вы узнаёте, как на самом деле устроен язык —
+            что кроется за каждым звуком, каждым правилом, каждым исключением.
+          </p>
+          <p>
+            И только потом — когда вы видите эту архитектуру —
+            вы начинаете говорить. Правильно. Уверенно. Навсегда.
+          </p>
+        </div>
+
+        <div className="mt-12 pt-8 border-t border-primary-foreground/20 text-right">
+          <p className="text-lg font-semibold">— Максим Онуфриев</p>
         </div>
       </div>
     </section>
