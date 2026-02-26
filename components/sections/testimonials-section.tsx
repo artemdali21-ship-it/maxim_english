@@ -1,32 +1,32 @@
 export function TestimonialsSection() {
   const testimonials = [
     {
-      name: 'Elena Kozlov',
-      role: 'CEO, Tech Startup',
-      quote: 'Maxim transformed my English in just 3 months. My board presentations are now confident and impactful.'
+      name: 'Артём',
+      role: 'Предприниматель',
+      quote: 'Занимаюсь с Максимом третий год. Это лучший преподаватель, которого я встречал. Не "курсы" — это системная работа, после которой начинаешь реально слышать и понимать язык.'
     },
     {
-      name: 'Marcus Weber',
-      role: 'International Business Manager',
-      quote: 'The accent training was incredible. My colleagues now say my English sounds natural and professional.'
+      name: 'Марина',
+      role: 'Маркетолог',
+      quote: 'Перепробовала три школы и две платформы. С Максимом впервые поняла, что грамматика — это логика, а не набор правил. Через три месяца начала понимать подкасты без субтитров.'
     },
     {
-      name: 'Sophie Laurent',
-      role: 'Marketing Director',
-      quote: 'Best investment I\'ve made for my career. Maxim\'s method is practical, engaging, and produces real results.'
+      name: 'Дмитрий',
+      role: 'Отец ученицы',
+      quote: 'Дочь занимается с 12 лет. За год — колоссальная разница: она начала смотреть сериалы в оригинале и поправлять моё произношение. Рекомендую всем, кому важен результат.'
     },
   ];
 
   return (
     <section id="testimonials" className="py-16 md:py-24 px-4 md:px-6 bg-background">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-primary mb-12 font-space-grotesk">
-          What My Students Say
+        <h2 className="text-4xl md:text-5xl font-bold text-primary mb-12 font-space-grotesk tracking-tight">
+          Что говорят ученики
         </h2>
         
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, idx) => (
-            <div key={idx} className="bg-secondary p-8 border border-border">
+            <div key={idx} className="bg-secondary p-8 border border-border rounded">
               <p className="text-muted-foreground mb-6 leading-relaxed italic">"{testimonial.quote}"</p>
               <div>
                 <p className="font-bold text-primary">{testimonial.name}</p>
