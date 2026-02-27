@@ -1,56 +1,67 @@
 'use client';
 
-import { ParallaxBackground } from '@/components/parallax-background';
+import { useState, useEffect } from 'react';
 
 export function FormatSection() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
-    <ParallaxBackground
-      src="/format-section-bg.jpeg"
-      speed={0.3}
-      overlay={
-        <div className="absolute inset-0 bg-[#1A2E1A]/70 hidden md:block" />
-      }
-    >
-      <section id="format" className="py-20 md:py-28 px-6 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto relative z-10">
-          <h2 className="text-5xl md:text-6xl font-serif font-bold text-white mb-4 tracking-tight leading-tight">
-            Как устроены<br />
-            <span className="text-yellow-100">занятия</span>
-          </h2>
+    <section id="format" className="parallax-bg py-20 md:py-28 px-6 relative overflow-hidden" style={{
+      backgroundImage: 'url(/format-section-bg.jpeg)',
+      backgroundSize: isMobile ? 'contain' : 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
+    }}>
+      {/* Overlay - NONE on mobile, strong on desktop */}
+      <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-black/60 via-black/50 to-black/60"></div>
+      
+      <div className="max-w-7xl mx-auto relative z-10">
+        <h2 className="text-5xl md:text-6xl font-serif font-bold text-white mb-4 tracking-tight leading-tight">
+          Как устроены<br />
+          <span className="text-yellow-100">занятия</span>
+        </h2>
 
-          <div className="grid md:grid-cols-3 gap-8 mt-16">
-            <div className="bg-transparent md:bg-secondary/30 p-10 border border-transparent md:border-border/50 space-y-4 hover:bg-white/10 md:hover:bg-white/10 transition-colors md:backdrop-blur-sm">
-              <div className="w-12 h-12 bg-accent/20 rounded flex items-center justify-center">
-                <span className="text-white font-serif text-2xl">①</span>
-              </div>
-              <h3 className="text-2xl font-serif font-bold text-white">Формат</h3>
-              <p className="text-white/80 leading-relaxed font-light">
-                Индивидуальные занятия: онлайн (Zoom / Google Meet) или очно. Программа выстраивается под ваш уровень, возраст и цели.
-              </p>
+        <div className="grid md:grid-cols-3 gap-8 mt-16">
+          <div className="bg-transparent md:bg-secondary/30 p-10 border border-transparent md:border-border/50 space-y-4 hover:bg-white/10 md:hover:bg-white/10 transition-colors md:backdrop-blur-sm">
+            <div className="w-12 h-12 bg-accent/20 rounded flex items-center justify-center">
+              <span className="text-white font-serif text-2xl">①</span>
             </div>
+            <h3 className="text-2xl font-serif font-bold text-white">Формат</h3>
+            <p className="text-white/80 leading-relaxed font-light">
+              Индивидуальные занятия: онлайн (Zoom / Google Meet) или очно. Программа выстраивается под ваш уровень, возраст и цели.
+            </p>
+          </div>
 
-            <div className="bg-transparent md:bg-secondary/30 p-10 border border-transparent md:border-border/50 space-y-4 hover:bg-white/10 md:hover:bg-white/10 transition-colors md:backdrop-blur-sm">
-              <div className="w-12 h-12 bg-accent/20 rounded flex items-center justify-center">
-                <span className="text-white font-serif text-2xl">②</span>
-              </div>
-              <h3 className="text-2xl font-serif font-bold text-white">Длительность</h3>
-              <p className="text-white/80 leading-relaxed font-light">
-                1 час (60 минут). Рекомендуемая частота — 2-3 раза в неделю для максимального эффекта.
-              </p>
+          <div className="bg-transparent md:bg-secondary/30 p-10 border border-transparent md:border-border/50 space-y-4 hover:bg-white/10 md:hover:bg-white/10 transition-colors md:backdrop-blur-sm">
+            <div className="w-12 h-12 bg-accent/20 rounded flex items-center justify-center">
+              <span className="text-white font-serif text-2xl">②</span>
             </div>
+            <h3 className="text-2xl font-serif font-bold text-white">Длительность</h3>
+            <p className="text-white/80 leading-relaxed font-light">
+              1 час (60 минут). Рекомендуемая частота — 2-3 раза в неделю для максимального эффекта.
+            </p>
+          </div>
 
-            <div className="bg-transparent md:bg-secondary/30 p-10 border border-transparent md:border-border/50 space-y-4 hover:bg-white/10 md:hover:bg-white/10 transition-colors md:backdrop-blur-sm">
-              <div className="w-12 h-12 bg-accent/20 rounded flex items-center justify-center">
-                <span className="text-white font-serif text-2xl">③</span>
-              </div>
-              <h3 className="text-2xl font-serif font-bold text-white">Первая встреча</h3>
-              <p className="text-white/80 leading-relaxed font-light">
-                Бесплатная консультация: 30 минут. Знакомство, определение уровня и обсуждение целей.
-              </p>
+          <div className="bg-transparent md:bg-secondary/30 p-10 border border-transparent md:border-border/50 space-y-4 hover:bg-white/10 md:hover:bg-white/10 transition-colors md:backdrop-blur-sm">
+            <div className="w-12 h-12 bg-accent/20 rounded flex items-center justify-center">
+              <span className="text-white font-serif text-2xl">③</span>
             </div>
+            <h3 className="text-2xl font-serif font-bold text-white">Первая встреча</h3>
+            <p className="text-white/80 leading-relaxed font-light">
+              Бесплатная консультация: 30 минут. Знакомство, определение уровня и обсуждение целей.
+            </p>
           </div>
         </div>
-      </section>
-    </ParallaxBackground>
+      </div>
+    </section>
   );
 }
