@@ -58,12 +58,6 @@ export function MythsSection() {
     }
   ];
 
-  // Get first 2-3 sentences for mobile preview
-  const getPreview = (content: string) => {
-    const sentences = content.split('.');
-    return sentences.slice(0, 2).join('.') + '.';
-  };
-
   return (
     <section id="myths" className="py-20 md:py-32 px-6 bg-background">
       <div className="max-w-5xl mx-auto">
@@ -103,12 +97,22 @@ export function MythsSection() {
                   </div>
                 </div>
                 
-                <div className="overflow-hidden transition-all duration-300 ease-in-out">
-                  <div className={`${expandedMyth === myth.number ? 'max-h-[2000px]' : 'max-h-20'} transition-all duration-300 ease-in-out`}>
-                    <p className="text-sm text-foreground/80 leading-relaxed font-light mb-3">
-                      {expandedMyth === myth.number ? myth.content : getPreview(myth.content)}
-                    </p>
+                <div className="relative">
+                  <div className={`overflow-hidden transition-all duration-300 ease-in-out ${expandedMyth === myth.number ? 'max-h-[5000px]' : 'max-h-24'}`}>
+                    {myth.content.split('\n\n').map((paragraph, idx) => (
+                      <p key={idx} className="text-sm text-foreground/80 leading-relaxed font-light mb-3">
+                        {paragraph.startsWith('*') ? (
+                          <em className="block italic text-foreground/60">{paragraph.replace(/\*/g, '')}</em>
+                        ) : (
+                          paragraph
+                        )}
+                      </p>
+                    ))}
                   </div>
+                  {/* Fade overlay when collapsed */}
+                  {expandedMyth !== myth.number && (
+                    <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-background to-transparent pointer-events-none" />
+                  )}
                 </div>
 
                 <button
