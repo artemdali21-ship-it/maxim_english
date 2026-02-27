@@ -21,14 +21,14 @@ export function TrustBarSection() {
           {logos.map((logo, idx) => (
             <div 
               key={idx} 
-              className="h-14 relative flex items-center justify-center opacity-60 hover:opacity-100 transition-all duration-300 group"
+              className="relative flex items-center justify-center opacity-60 hover:opacity-100 transition-all duration-300 group"
             >
               <Image
                 src={logo.src}
                 alt={logo.alt}
                 width={logo.width}
                 height={logo.height}
-                className="object-contain group-hover:scale-110 transition-transform duration-300"
+                className="object-contain w-auto h-auto group-hover:scale-110 transition-transform duration-300"
               />
             </div>
           ))}
