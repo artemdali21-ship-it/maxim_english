@@ -11,7 +11,7 @@ const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: '--font-mon
 
 export const metadata: Metadata = {
   title: 'Maxim Onufriev | English Language Expert',
-  description: 'Premium English tutoring with focus on pronunciation and business communication. Personalized training programs for professionals.',
+  description: 'Premium English tutoring with focus on pronunciation and business communication. Personalised training programmes for professionals.',
   generator: 'v0.app',
   icons: {
     icon: '/favicon.ico',
