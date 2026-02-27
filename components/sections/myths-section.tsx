@@ -1,6 +1,10 @@
 'use client';
 
+import { useState } from 'react';
+
 export function MythsSection() {
+  const [expandedMyth, setExpandedMyth] = useState<number | null>(null);
+
   const myths = [
     {
       number: 1,
@@ -54,6 +58,12 @@ export function MythsSection() {
     }
   ];
 
+  // Get first 2-3 sentences for mobile preview
+  const getPreview = (content: string) => {
+    const sentences = content.split('.');
+    return sentences.slice(0, 2).join('.') + '.';
+  };
+
   return (
     <section id="myths" className="py-20 md:py-32 px-6 bg-background">
       <div className="max-w-5xl mx-auto">
@@ -62,23 +72,51 @@ export function MythsSection() {
           <span className="text-accent">Debunking Some Myths</span>
         </h2>
         
-        <div className="space-y-16 md:space-y-20 mt-16">
+        <div className="space-y-8 md:space-y-16 mt-16">
           {myths.map((myth) => (
             <div key={myth.number} className="border-l-4 border-accent pl-8 md:pl-12">
-              <div className="flex items-baseline gap-4 mb-6">
-                <span className="text-6xl md:text-7xl font-serif font-bold text-accent/30">{myth.number}</span>
-                <h3 className="text-2xl md:text-3xl font-serif font-bold text-primary">{myth.title}</h3>
+              {/* Desktop: Always show full content */}
+              <div className="hidden md:block">
+                <div className="flex items-baseline gap-4 mb-6">
+                  <span className="text-6xl md:text-7xl font-serif font-bold text-accent/30">{myth.number}</span>
+                  <h3 className="text-2xl md:text-3xl font-serif font-bold text-primary">{myth.title}</h3>
+                </div>
+                <div className="prose prose-invert max-w-none">
+                  {myth.content.split('\n\n').map((paragraph, idx) => (
+                    <p key={idx} className="text-base md:text-lg text-foreground/85 leading-relaxed font-light mb-4 md:mb-6">
+                      {paragraph.startsWith('*') ? (
+                        <em className="block italic text-foreground/70">{paragraph.slice(1, -1)}</em>
+                      ) : (
+                        paragraph
+                      )}
+                    </p>
+                  ))}
+                </div>
               </div>
-              <div className="prose prose-invert max-w-none">
-                {myth.content.split('\n\n').map((paragraph, idx) => (
-                  <p key={idx} className="text-base md:text-lg text-foreground/85 leading-relaxed font-light mb-4 md:mb-6">
-                    {paragraph.startsWith('*') ? (
-                      <em className="block italic text-foreground/70">{paragraph.slice(1, -1)}</em>
-                    ) : (
-                      paragraph
-                    )}
-                  </p>
-                ))}
+
+              {/* Mobile: Accordion */}
+              <div className="md:hidden">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="text-4xl font-serif font-bold text-accent/40 flex-shrink-0">{myth.number}</span>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-serif font-bold text-primary">{myth.title}</h3>
+                  </div>
+                </div>
+                
+                <div className="overflow-hidden transition-all duration-300 ease-in-out">
+                  <div className={`${expandedMyth === myth.number ? 'max-h-[2000px]' : 'max-h-20'} transition-all duration-300 ease-in-out`}>
+                    <p className="text-sm text-foreground/80 leading-relaxed font-light mb-3">
+                      {expandedMyth === myth.number ? myth.content : getPreview(myth.content)}
+                    </p>
+                  </div>
+                </div>
+
+                <button
+                  onClick={() => setExpandedMyth(expandedMyth === myth.number ? null : myth.number)}
+                  className="text-sm font-medium text-accent hover:text-accent/80 transition-colors duration-200 mt-2"
+                >
+                  {expandedMyth === myth.number ? 'Свернуть ↑' : 'Читать далее ↓'}
+                </button>
               </div>
             </div>
           ))}

@@ -98,6 +98,14 @@
     @apply border-border;
   }
 
+  /* Disable parallax on mobile devices (iOS Safari fix) */
+  @media (max-width: 768px) {
+    * {
+      background-attachment: scroll !important;
+    }
+  }
+}
+
   body {
     @apply bg-background text-foreground;
   }
