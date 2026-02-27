@@ -23,7 +23,7 @@ export function AboutSection() {
           </div>
           <div className="space-y-8 text-foreground leading-relaxed flex flex-col justify-center">
             <p className="text-lg font-light">
-              Меня зовут Максим Онуфриев. Я окончил филологический факультет МГУ и преподаю английский язык с 2010 года.
+              Меня зовут Максим Онуфриев. Я окончил ИСАА МГУ и преподаю английский язык с 2010 года.
             </p>
             <p className="text-lg font-light">
               За это время я провел более сотни студентов через свою систему — от школьников до топ-менеджеров DHL, юристов Linklaters и сотрудников Яндекса.
@@ -35,7 +35,7 @@ export function AboutSection() {
             <div className="bg-secondary/50 p-8 border border-border/50 mt-4">
               <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-3">Факт</p>
               <p className="text-sm leading-relaxed text-foreground/90">
-                Я требовательный преподаватель. Если вы ошиблись — я поправлю. Помимо английского, я изучал китайский — один из сложнейших языков мира. Это дало мне уникальное понимание того, как люди осваивают фонетику и структуру чужого языка.
+                Я требовательный преподаватель. Если вы ошиблись — я поправлю.
               </p>
             </div>
           </div>

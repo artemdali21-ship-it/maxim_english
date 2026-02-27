@@ -26,7 +26,7 @@ export function ForWhomSection() {
               </li>
               <li className="flex gap-4">
                 <span className="text-accent font-semibold text-lg flex-shrink-0 mt-0.5">—</span>
-                <span className="text-foreground/80 font-light leading-relaxed">Хотите наконец понять, как язык устроен, а не зубрить правила</span>
+                <span className="text-foreground/80 font-light leading-relaxed">Хотите наконец понять, как язык устроен, и ПОЧЕМУ правило такое, а не какое-то ещё, вместо слепой зубрёжки</span>
               </li>
             </ul>
           </div>

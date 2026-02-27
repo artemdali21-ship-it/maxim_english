@@ -37,7 +37,7 @@ export function FormatSection() {
             </div>
             <h3 className="text-2xl font-serif font-bold text-white">Формат</h3>
             <p className="text-white/80 leading-relaxed font-light">
-              Индивидуальные занятия: онлайн (Zoom / Google Meet) или очно. Программа выстраивается под ваш уровень, возраст и цели.
+              Индивидуальные занятия: онлайн (Zoom / Google Meet или другие платформы) или очно. Программа выстраивается под ваш уровень, возраст и цели.
             </p>
           </div>
 
@@ -47,7 +47,7 @@ export function FormatSection() {
             </div>
             <h3 className="text-2xl font-serif font-bold text-white">Длительность</h3>
             <p className="text-white/80 leading-relaxed font-light">
-              1 час (60 минут). Рекомендуемая частота — 2-3 раза в неделю для максимального эффекта.
+              1 час (60 минут). Рекомендуемая частота — 2-3 раза в неделю для максимального эффекта. А вообще — the more, the better
             </p>
           </div>
 
@@ -57,7 +57,7 @@ export function FormatSection() {
             </div>
             <h3 className="text-2xl font-serif font-bold text-white">Первая встреча</h3>
             <p className="text-white/80 leading-relaxed font-light">
-              Бесплатная консультация: 30 минут. Знакомство, определение уровня и обсуждение целей.
+              30 минут. Знакомство, определение уровня и обсуждение целей.
             </p>
           </div>
         </div>
