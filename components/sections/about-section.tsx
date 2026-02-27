@@ -26,7 +26,7 @@ export function AboutSection() {
               Меня зовут Максим Онуфриев. Я окончил филологический факультет МГУ и преподаю английский язык с 2010 года.
             </p>
             <p className="text-lg font-light">
-              За это время я провёл более сотни студентов через свою систему — от школьников до топ-менеджеров DHL, юристов Linklaters и сотрудников Яндекса.
+              За это время я провел более сотни студентов через свою систему — от школьников до топ-менеджеров DHL, юристов Linklaters и сотрудников Яндекса.
             </p>
             <p className="text-lg font-light">
               Я разработал методологию, в которой грамматика, разговорная речь, фонетика и произношение работают как единое целое. Не четыре отдельных курса — а одна архитектура языка.
@@ -37,31 +37,6 @@ export function AboutSection() {
               <p className="text-sm leading-relaxed text-foreground/90">
                 Я требовательный преподаватель. Если вы ошиблись — я поправлю. Помимо английского, я изучал китайский — один из сложнейших языков мира. Это дало мне уникальное понимание того, как люди осваивают фонетику и структуру чужого языка.
               </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="border-t border-border/30 pt-16">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
-            <div className="text-center space-y-2">
-              <p className="text-5xl font-serif font-bold text-accent">2010</p>
-              <p className="text-xs text-muted-foreground uppercase tracking-wider leading-relaxed">Преподаю<br />английский</p>
-            </div>
-            <div className="text-center space-y-2">
-              <p className="text-5xl font-serif font-bold text-accent">МГУ</p>
-              <p className="text-xs text-muted-foreground uppercase tracking-wider leading-relaxed">Филологическое<br />образование</p>
-            </div>
-            <div className="text-center space-y-2">
-              <p className="text-5xl font-serif font-bold text-accent">100+</p>
-              <p className="text-xs text-muted-foreground uppercase tracking-wider leading-relaxed">Студентов<br />прошли мою систему</p>
-            </div>
-            <div className="text-center space-y-2">
-              <p className="text-5xl font-serif font-bold text-accent">5</p>
-              <p className="text-xs text-muted-foreground uppercase tracking-wider leading-relaxed">Корпоративных<br />клиентов</p>
-            </div>
-            <div className="text-center space-y-2">
-              <p className="text-5xl font-serif font-bold text-accent">4</p>
-              <p className="text-xs text-muted-foreground uppercase tracking-wider leading-relaxed">Авторских<br />направления</p>
             </div>
           </div>
         </div>
