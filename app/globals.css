@@ -104,7 +104,6 @@
       background-attachment: scroll !important;
     }
   }
-}
 
   body {
     @apply bg-background text-foreground;
