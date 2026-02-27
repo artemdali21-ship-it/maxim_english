@@ -75,7 +75,7 @@ export function CTASection() {
             </div>
 
             <p className="text-xs text-foreground/60 uppercase tracking-wider">
-              Обычно отвечаю в течение нескольких часов
+              Обычно отвечаю в течение 1 часа
             </p>
           </div>
         </div>
